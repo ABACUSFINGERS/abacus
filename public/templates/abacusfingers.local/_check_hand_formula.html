@@ -1,0 +1,415 @@
+
+{{define "base.html"}}
+
+    <!DOCTYPE HTML>
+    <!--[if IE 7 ]>
+    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+    <!--[if IE 8 ]>
+    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+    <!--[if IE 9 ]>
+    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <html lang="fr-fr" class="no-js">
+    <!--<![endif]-->
+
+    <head>
+        <meta http-equiv="content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>TODO</title>
+        <meta name="author" content="flycode">
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/abacus/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/abacus/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/abacus/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/abacus/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/abacus/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/abacus/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/abacus/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/abacus/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/abacus/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/abacus/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/abacus/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/abacus/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/abacus/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/assets/abacus/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <link href="/assets/abacus/css/custom.css" rel="stylesheet" type="text/css">
+        <!--[if IE 7]>
+        <link href="/assets/abacus/css/font-awesome-ie7.css" rel="stylesheet" type="text/css">
+        <![endif]-->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic'
+              rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+              rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body class="main">
+    <div id="check_hand_formula" class="container-fluid h-100">
+
+
+        {{template "menutoolbar" .}}
+
+        <div class="row h-5">
+            <div class="col-12 text-center my-auto">
+                <div id="progressbar-container" class="progress">
+                    <div id="progressbar" class="progress-bar bg-success" role="progressbar" aria-valuenow="0"
+                         aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="formula_exercise" class="row h-85">
+            <div class="col-12">
+
+                <div class="row h-20">
+                    <div class="col-12 text-center my-auto">
+                        <h2 class="text-center p-2">Formule</h2>
+                        <div id="square_rule">
+                            <span class="result text-violet pr-3">?</span>=<span class="operation p-3">?</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row h-20">
+                    <div class="col-12 text-center my-auto">
+                        <h3 class="text-center p-2 pt-1">Exercise</h3>
+                        <div id="square_rule_exercise" class="operation_example letter-spacing-0-5">
+                            ?
+                        </div>
+                    </div>
+                </div>
+
+                <div id="possibility1" class="row h-25 no-gutters my-auto possibility bg-default">
+                </div>
+
+                <div class="row h-10">
+                    <div class="col-12 text-center my-auto">
+                        <h4 class="w-100 text-center text-violet">Ou</h4>
+                    </div>
+                </div>
+
+                <div id="possibility2" class="row h-25 no-gutters my-auto possibility bg-default">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row h-10">
+            <div class="col-12 text-center my-auto">
+                <button id="next" data-id="0" class="btn btn-lg btn-block"><i class="fa fa-arrow-right fa-2x"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="result" class="container-fluid h-100 d-none">
+        <div class="row h-15">
+            <div class="col-12 text-center my-auto">
+                <h1 id="encouragement">Congratulations</h1>
+            </div>
+        </div>
+
+        <div class="row h-70">
+            <div class="col-12 text-center my-auto">
+                <div class="portfolio-thumb">
+                    <img id="item-mask" class="item-mask" src="/assets/abacus/images/portfolio-mask.png" alt="" title="">
+                    <span class="step-order">{{ .step.Order }}</span>
+                </div>
+                <div id="stars">
+                    <p><i class="first fa fa-star fa-2x text-yellow"></i> <i class="second fa fa-star fa-2x text-yellow"></i> <i class="third fa fa-star fa-2x text-yellow"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row h-15">
+            <div class="col-4 text-center my-auto">
+                <button id="game-menu" onclick="goToURL('/jeu/');" data-id="0" class="btn btn-lg btn-block bg-yellow text-white"><i class="fa fa-list fa-2x"></i></button>
+            </div>
+            <div class="col-4 text-center my-auto">
+                <button id="game-refresh" onclick="refresh();" data-id="0" class="btn btn-lg btn-block bg-green text-white"><i class="fa fa-refresh fa-2x"></i></button>
+            </div>
+            <div class="col-4 text-center my-auto">
+                <button id="game-next" onclick="goToNextGame('{{ .step.Order }}');" data-id="0" class="btn btn-lg btn-block bg-violet text-white"><i class="fa fa-forward fa-2x"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src="/assets/abacus/js/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/assets/abacus/js/game.js"></script>
+
+    <script type="application/javascript">
+        $(function () {
+
+            let steps = {{ .step.Lessons }};
+            let trains = {{ .step.Trains }};
+            let errorCounter = 0;
+
+            let index = parseInt($("#next").data("id"));
+            let rule = getRuleByIndex(index);
+            $("#formula_exercise .result").html(getResult(rule));
+            $("#formula_exercise .operation").html(getOperation(rule));
+
+            $("#square_rule_exercise").html(getExerciseOperation(index) + " =");
+
+            $("#next").data("id", index);
+
+            let values = [];
+            let value = getStepValueById(index);
+            values.push(value);
+
+            let trueSuffixID = getRandomInt(1, 2);
+            let strOperation = getExerciseOperation(index).toString();
+            let operationItems = strOperation.split('+');
+            let htmlHands = "";
+            let rightHandValue = 0;
+            let leftHandValue = 0;
+            let result = getExerciseResult(index);
+            $(".possibility").each(function () {
+                var currentID = $(this).attr('id');
+                htmlHands = "";
+
+                for (let i = 0; i < operationItems.length; i++) {
+                    value = parseInt(operationItems[i]);
+                    rightHandValue = value % 10;
+                    leftHandValue = value / 10;
+                    htmlHands += '<div class="col-2 text-right"><img id="left_hand' + currentID + i + '" class="left_hand" data-value="' + leftHandValue + '" src="/assets/abacus/images/hands/left0.png" class="float-right"></div><div class="col-2"><img id="right_hand' + currentID + i + '" class="right_hand" data-value="' + rightHandValue + '" src="/assets/abacus/images/hands/right0.png" class="float-left"><i class="fa fa-arrow-right text-violet"></i></div>';
+                }
+
+                rightHandValue = result % 10;
+                leftHandValue = result / 10;
+                htmlHands += '<div class="col-2 text-right"><img id="left_hand_result' + currentID + '" class="left_hand" data-value="' + leftHandValue + '" src="/assets/abacus/images/hands/left0.png" class="float-right"></div><div class="col-2"><img id="right_hand_result' + currentID + '" class="right_hand" data-value="' + rightHandValue + '" src="/assets/abacus/images/hands/right0.png" class="float-left"></div><input id="radio' + currentID + '" type="radio" name="radioHand" value="" class="form-radio radio-default d-none">';
+                $("#" + currentID).html(htmlHands);
+
+                if (currentID !== "possibility" + trueSuffixID) {
+                    let randomValue = 0;
+                    let randomValues = [];
+                    if (value < 10) {
+                        for (let i = 0; i < operationItems.length; i++) {
+                            randomValue = getRandomInt(0, 9, values);
+                            randomValues.push(randomValue);
+                            values.push(randomValue);
+                            randomValue = getRandomInt(0, 9, values);
+                            randomValues.push(randomValue);
+                        }
+                    } else {
+                        for (let i = 0; i < operationItems.length; i++) {
+                            randomValue = getRandomInt(0, 99, values);
+                            randomValues.push(randomValue);
+                            values.push(randomValue);
+                            randomValue = getRandomInt(0, 99, values);
+                            randomValues.push(randomValue);
+                        }
+                    }
+                    // configuration des mains > mauvais résultat
+                    changeFingers(result, '_result' + currentID);
+                    for (let i = 0; i < randomValues.length; i++) {
+                        value = parseInt(randomValues[i]);
+                        changeFingers(value, currentID + i);
+                    }
+                } else {
+                    // configuration des mains > bon résultat
+                    changeFingers(result, '_result' + "possibility" + trueSuffixID);
+                    for (let i = 0; i < operationItems.length; i++) {
+                        value = parseInt(operationItems[i]);
+                        changeFingers(value, "possibility" + trueSuffixID + i);
+                    }
+                    $( "#radio" + currentID ).val("good");
+                }
+            });
+
+            $("#next").data("id", index);
+
+            $("#next").click(function () {
+                let index = parseInt($(this).data("id"));
+                if ($('#formula_exercise').find('.bg-selected').length !== 0) {
+                    let radioSelected = $('input[name=radioHand]:checked');
+                    let choosedValue = radioSelected.val().toString();
+                    let isSuccess = false;
+                    if (choosedValue === "good") {
+                        isSuccess = true;
+                        $("#next > i").toggleClass('fa-arrow-right fa-check', 250);
+                        $("#next").toggleClass('bg-default bg-success', 250);
+                        $('.bg-selected').toggleClass('bg-selected bg-success', 250);
+                    } else {
+                        errorCounter++;
+                        $("#next").toggleClass('bg-default bg-danger', 250);
+                        $('.bg-default').addClass('bg-default bg-success', 250);
+                        $('.bg-selected').toggleClass('bg-selected bg-default', 250);
+                    }
+
+                    changeExerciseProgressbar(index, getNumberOfSteps(), isSuccess);
+                    if (isLastStep(index)) {
+                        $("#check_hand_formula").hide();
+                        $("#result").removeClass('d-none');
+                        setStars(errorCounter);
+                        setResult({{.step.ID}}, errorCounter);
+                        setEncouragement(errorCounter);
+                    }
+
+                } else {
+                    let values = [];
+                    let value = getNextStepValueById(index);
+                    values.push(value);
+
+                    let trueSuffixID = getRandomInt(1, 2);
+                    let strOperation = getNextExerciseOperation(index).toString();
+                    let operationItems = strOperation.split('+');
+                    let htmlHands = "";
+                    let rightHandValue = 0;
+                    let leftHandValue = 0;
+                    let result = getNextExerciseResult(index);
+                    $(".possibility").each(function () {
+                        var currentID = $(this).attr('id');
+                        htmlHands = "";
+
+                        for (let i = 0; i < operationItems.length; i++) {
+                            value = parseInt(operationItems[i]);
+                            rightHandValue = value % 10;
+                            leftHandValue = value / 10;
+                            htmlHands += '<div class="col-2 text-right"><img id="left_hand' + currentID + i + '" class="left_hand" data-value="' + leftHandValue + '" src="/assets/abacus/images/hands/left0.png" class="float-right"></div><div class="col-2"><img id="right_hand' + currentID + i + '" class="right_hand" data-value="' + rightHandValue + '" src="/assets/abacus/images/hands/right0.png" class="float-left"><i class="fa fa-arrow-right text-violet"></i></div>';
+                        }
+
+                        rightHandValue = result % 10;
+                        leftHandValue = result / 10;
+                        htmlHands += '<div class="col-2 text-right"><img id="left_hand_result' + currentID + '" class="left_hand" data-value="' + leftHandValue + '" src="/assets/abacus/images/hands/left0.png" class="float-right"></div><div class="col-2"><img id="right_hand_result' + currentID + '" class="right_hand" data-value="' + rightHandValue + '" src="/assets/abacus/images/hands/right0.png" class="float-left"><input id="radio' + currentID + '" type="radio" name="radioHand" value="" id="radio2" class="form-radio radio-default d-none"></div>';
+                        $("#" + currentID).html(htmlHands);
+
+                        if (currentID !== "possibility" + trueSuffixID) {
+                            let randomValue = 0;
+                            let randomValues = [];
+                            if (value < 10) {
+                                for (let i = 0; i < operationItems.length; i++) {
+                                    randomValue = getRandomInt(0, 9, values);
+                                    randomValues.push(randomValue);
+                                    values.push(randomValue);
+                                    randomValue = getRandomInt(0, 9, values);
+                                    randomValues.push(randomValue);
+                                }
+                            } else {
+                                for (let i = 0; i < operationItems.length; i++) {
+                                    randomValue = getRandomInt(0, 99, values);
+                                    randomValues.push(randomValue);
+                                    values.push(randomValue);
+                                    randomValue = getRandomInt(0, 99, values);
+                                    randomValues.push(randomValue);
+                                }
+                            }
+                            // configuration des mains
+                            changeFingers(result, '_result' + currentID);
+                            for (let i = 0; i < randomValues.length; i++) {
+                                value = parseInt(randomValues[i]);
+                                changeFingers(value, currentID + i);
+                            }
+                        } else {
+                            // configuration des mains
+                            changeFingers(result, '_result' + "possibility" + trueSuffixID);
+                            for (let i = 0; i < operationItems.length; i++) {
+                                value = parseInt(operationItems[i]);
+                                changeFingers(value, "possibility" + trueSuffixID + i);
+                            }
+                            $( "#radio" + currentID ).val("good");
+                        }
+                    });
+
+                    $("#square_rule_exercise").html(getNextExerciseOperation(index) + " =");
+
+                    $("#next > i").removeClass('fa-check', 250);
+                    $("#next > i").addClass('fa-arrow-right', 250);
+
+                    $("#next").removeClass('bg-danger', 250);
+                    $("#next").removeClass('bg-success', 250);
+                    $("#next").addClass('bg-default', 250);
+
+                    $('.possibility.bg-success').toggleClass('bg-success bg-default', 250);
+                    $("#next").data("id", index + 1);
+                }
+            });
+
+            $(".possibility").each(function () {
+                var possibility = $(this);
+                possibility.click(function () {
+                    $(".possibility").each(function () {
+                        $(this).removeClass("bg-selected", 250);
+                        $(this).addClass("bg-default", 250);
+                        //$(this).find("radio").prop("checked", false);
+                    });
+                    possibility.toggleClass("bg-default bg-selected", 250);
+                    possibility.find(".radio-default").prop("checked", true);
+                });
+            });
+
+            // Retourne la valeur de l'étape courrante
+            function getRuleByIndex(index) {
+                return steps[index];
+            }
+
+            // Retourne la valeur de l'étape courrante
+            function getResult(rule) {
+                return rule.Children[0];
+            }
+
+            // Retourne la valeur de l'étape courrante
+            function getOperation(rule) {
+                return rule.Children[1];
+            }
+
+            function getExerciseOperation(id) {
+                return trains[0].Children[id].Operation;
+            }
+
+            function getExerciseResult(id) {
+                return trains[0].Children[id].Result;
+            }
+
+            function getNextExerciseOperation(id) {
+                return trains[0].Children[id + 1].Operation;
+            }
+
+            function getNextExerciseResult(id) {
+                return trains[0].Children[id + 1].Result;
+            }
+
+            // Retourne la valeur de l'étape courrante
+            function getStepValueById(id) {
+                return steps[0].Children[id];
+            }
+
+            // Retourne la valeur de la prochaine étape
+            function getNextStepValueById(id) {
+                return trains[0].Children[id + 1];
+            }
+
+            // Retourne le nomnbre d'étape dans la lesson
+            function getNumberOfSteps() {
+                return parseInt(trains[0].Children.length);
+            }
+
+            // Retourne true si on est à la dernière étape
+            function isLastStep(currentIndexStep) {
+                return (currentIndexStep === getNumberOfSteps() - 1);
+            }
+        });
+    </script>
+
+    </body>
+
+    </html>
+{{end}}

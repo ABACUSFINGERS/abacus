@@ -1,0 +1,95 @@
+{{define "base.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/assets/dashboard/img/basic/favicon.ico" type="image/x-icon">
+    <title>{{.title}}</title>
+    <link rel="stylesheet" href="/assets/dashboard/css/app.css">
+    <link rel="stylesheet" href="/assets/dashboard/css/theme.css">
+</head>
+<body class="light sidebar-mini sidebar-collapse">
+<div id="loader" class="loader">
+    <div class="plane-container">
+        <div class="preloader-wrapper small active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                    <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                    <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                    <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                    <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="app">
+    <main>
+        <div id="primary" class="p-t-b-100 height-full" style="    background: linear-gradient(#659AA0, #497D83);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mx-md-auto paper-card">
+                        <div class="text-center">
+                            <img src="/assets/abacus/images/logo.png" alt="">
+                            <h3 class="mt-2">Login</h3>
+                            <p class="p-t-b-20">Lorem</p>
+                        </div>
+                        <form method="post">
+                            <p class="error">{{.error}}</p>
+                            <div class="form-group has-icon"><i class="icon-envelope-o"></i>
+                                <input name="email" type="email" class="form-control form-control-lg"
+                                       placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group has-icon"><i class="icon-user-secret"></i>
+                                <input name="password" type="password" class="form-control form-control-lg"
+                                       placeholder="Password" required>
+                            </div>
+                            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Log In">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="control-sidebar-bg shadow white fixed"></div>
+</div>
+<script src="/assets/dashboard/js/app.js"></script>
+
+</body>
+</html>
+{{end}}

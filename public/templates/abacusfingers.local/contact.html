@@ -1,0 +1,62 @@
+{{define "body"}}
+
+
+
+{{ if .message }}
+
+
+<div>
+    Message envoyé
+</div>
+
+{{else if .message }}
+
+
+<div>
+    Desolé votre Message n'a pas pu etre envoyé
+</div>
+
+{{ end }}
+
+
+
+    <div id="main">
+        <div class="breadcrumb-section">
+            <div class="container">
+                <h1>Nous contacter</h1>
+            </div>
+        </div>
+        <div class="container">
+            <section id="primary" class="content-full-width">
+                <div class="column dt-sc-three-fourth first contact_form_outer">
+                    <form name="frcontact" class="contact-form" method="post" action="#">
+                        <h2>Laissez nous un message et nous vous répondrons !</h2>
+                        <p class="column dt-sc-one-third first">
+                            <input id="name" name="name" type="text" placeholder="Nom" required="">
+                        </p>
+                        <p class="column dt-sc-one-third">
+                            <input id="email" name="email" type="email" placeholder="Email" required="">
+                        </p>
+                        <p class="column dt-sc-one-third">
+                            <input id="subject" name="subject" type="text" placeholder="Sujet" required="">
+                        </p>
+                        <p>
+                            <textarea id="comment" name="comment" placeholder="Message"></textarea>
+                        </p>
+                        <p>
+                            <input name="submit" type="submit" id="submit" class="dt-sc-button medium" value="Envoyer">
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div style="visibility: hidden">
+        <span id="hostname">{{.host}}</span>
+    </div>
+      
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="/assets/abacus/js/contact.js"></script>
+{{end}}

@@ -1,0 +1,83 @@
+{{define "body"}}
+    <div class="container" style="margin-top: 40px; margin-bottom: 40px;">
+        <a href="/dashboard/category/">
+            <button type="button" class="btn btn-primary btn-lg btn-block">Add a User</button>
+        </a>
+        <section class="paper-card">
+            <div class="container-fluid relative animatedParent animateOnce my-3">
+                <div class="row row-eq-height my-3 mt-3">
+                    <div class="col-md-12">
+                        <div class="row">
+
+                            <div class="box-body table-responsive no-padding">
+                                <table class="table table-hover">
+                                    <tbody id="meta_table">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Firstname Lastname</th>
+                                        <th>Email</th>
+                                        <th>CanAdmin</th>
+                                        <th>CanCatalog</th>
+                                        <th>CanCommand</th>
+                                        <th>CanContact</th>
+                                        <th>CanCms</th>
+                                        <th>CanMessage</th>
+                                        <th>CanUser</th>
+                                        <th>Action</th>
+                                    </tr>
+
+                                    {{ range $user := .users }}
+                                        <tr>
+                                            <td>{{ $user.ID }}</td>
+                                            <th>{{ $user.Firstname }} {{ $user.Lastname }}</th>
+                                            <th>{{ $user.Email }}</th>
+                                            <th>{{ $user.CanAdmin }}</th>
+                                            <th>{{ $user.CanCatalog }}</th>
+                                            <th>{{ $user.CanCommand }}</th>
+                                            <th>{{ $user.CanContact }}</th>
+                                            <th>{{ $user.CanCms }}</th>
+                                            <th>{{ $user.CanMessage }}</th>
+                                            <th>{{ $user.CanUser }}</th>
+                                            <td>
+                                                <a href="/dashboard/user/?id={{$user.ID}}">
+                                                    <button type="button" class="btn btn-info"><i class="icon-edit"></i>
+                                                    </button>
+                                                </a>
+                                                {{ if ne $user.Email "contact@flycode.io" }}
+                                                    <a href="/dashboard/user/delete/?id={{$user.ID}}">
+                                                        <button type="button" class="btn btn-danger"><i
+                                                                    class="icon-delete"></i></button>
+                                                    </a>
+                                                {{ end }}
+                                            </td>
+                                        </tr>
+                                    {{ end }}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="pagination">
+        <ul class="pagination justify-content-center" style="margin: 0 auto 40px auto;">
+            <li class="page-item {{ if eq .page 0 }}disabled{{ end }}">
+                <a style="width: 200px; margin: 0 20px; text-align: center; color: #272c33; font-weight: bold;"
+                   class="page-link page-link--with-arrow" href="?p={{.page_p}}"
+                   aria-label="Previous">
+                    PREVIOUS
+                </a>
+            </li>
+            <li class="page-item">
+                <a style="width: 200px; margin: 0 20px; text-align: center; color: #272c33; font-weight: bold;"
+                   class="page-link page-link--with-arrow" href="?p={{.page_n}}"
+                   aria-label="Next">
+                    NEXT
+                </a>
+            </li>
+        </ul>
+    </div>
+{{end}}

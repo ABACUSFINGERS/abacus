@@ -1,0 +1,23 @@
+{{define "body"}}
+    <div id="main" class="mon-compte">
+        <div class="container">
+            <!--primary starts-->
+            <section id="primary" class="content-full-width">
+
+                <h2 class="dt-sc-hr-green-title">Mon compte</h2>
+                <div class="column dt-sc-hr">
+                    <div class="dt-sc-toggle-frame-set course">
+                        <h5 class="dt-sc-toggle-accordion active"><a href="#">Bonjour {{ .student.FirstName }}</a></h5>
+                        <div class="dt-sc-toggle-content" style="display: block;">
+                            <div class="block">
+                                Votre licence expirera le {{ .student.EnLicenceDate }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--primary ends-->
+        </div>
+        <!--container ends-->
+    </div>
+{{end}}

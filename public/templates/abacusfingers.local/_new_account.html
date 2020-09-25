@@ -1,0 +1,135 @@
+{{define "base.html"}}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <link rel="icon" href="/assets/dashboard/img/basic/favicon.ico" type="image/x-icon">
+        <title>{{.title}}</title>
+        <meta name="author" content="flycode">
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/abacus/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/abacus/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/abacus/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/abacus/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/abacus/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/abacus/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/abacus/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/abacus/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/abacus/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/abacus/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/abacus/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/abacus/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/abacus/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/assets/abacus/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="/assets/dashboard/css/app.css">
+        <link rel="stylesheet" href="/assets/dashboard/css/theme.css">
+        <link href="/assets/abacus/css/style.css" rel="stylesheet" type="text/css">
+        <link href="/assets/abacus/css/custom.css" rel="stylesheet" type="text/css">
+    </head>
+    <body class="light sidebar-mini sidebar-collapse">
+    <div id="loader" class="loader">
+        <div class="plane-container">
+            <div class="preloader-wrapper small active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="login">
+        <main>
+            <div class="p-t-b-100 height-full fullwidth-background dt-sc-parallax-section turquoise-bg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4 mx-md-auto paper-card">
+                            <div class="text-center">
+                                <a href="/">
+                                    <img src="/assets/abacus/images/logo.png" alt="">
+                                </a>
+                                <h3 class="mt-2">Écran de création</h3>
+                            </div>
+                            <form method="post">
+                                <p class="error">{{.error}}</p>
+                                <div class="form-group has-icon"><i class="icon-envelope-o"></i>
+                                    <input name="firsName" type="text" class="form-control form-control-lg"
+                                           placeholder="prénom" required>
+                                </div>
+                                <div class="form-group has-icon"><i class="icon-envelope-o"></i>
+                                    <input name="lastName" type="text" class="form-control form-control-lg"
+                                           placeholder="nom" required>
+                                </div>
+                                <div class="form-group has-icon"><i class="icon-envelope-o"></i>
+                                    <input name="birthday" type="date" class="form-control form-control-lg" required>
+                                </div>
+                                <div class="form-group has-icon"><i class="icon-envelope-o"></i>
+                                    <input name="email" type="email" class="form-control form-control-lg"
+                                           placeholder="adresse email" required>
+                                </div>
+                                <div class="form-group has-icon"><i class="icon-user-secret"></i>
+                                    <input name="password" type="password" class="form-control form-control-lg"
+                                           placeholder="mot de passe" required>
+                                </div>
+                                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Créer">
+                                <div class="text-center mt-4"><a href="/connexion/">créer un nouveau compte</a></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="control-sidebar-bg shadow white fixed"></div>
+    </div>
+    <script src="/assets/dashboard/js/app.js"></script>
+
+    </body>
+    </html>
+{{end}}

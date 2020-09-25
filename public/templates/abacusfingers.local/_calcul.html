@@ -1,0 +1,437 @@
+
+
+{{define "base.html"}}
+
+    <!DOCTYPE HTML>
+    <!--[if IE 7 ]>
+    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+    <!--[if IE 8 ]>
+    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+    <!--[if IE 9 ]>
+    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <html lang="fr-fr" class="no-js">
+    <!--<![endif]-->
+
+    <head>
+        <meta http-equiv="content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>TODO</title>
+        <meta name="author" content="flycode">
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/abacus/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/abacus/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/abacus/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/abacus/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/abacus/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/abacus/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/abacus/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/abacus/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/abacus/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/abacus/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/abacus/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/abacus/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/abacus/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/assets/abacus/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <link href="/assets/abacus/css/custom.css" rel="stylesheet" type="text/css">
+        <!--[if IE 7]>
+        <link href="/assets/abacus/css/font-awesome-ie7.css" rel="stylesheet" type="text/css">
+        <![endif]-->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic'
+              rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+              rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body class="main">
+    <div id="calcul" class="container-fluid h-100">
+
+
+       {{template "menutoolbar" .}}
+
+
+        <div class="row h-15">
+
+
+
+            <div class="col-12 text-center my-auto">
+
+            <div id="progressbar-container" class="progress">
+                    <div id="progressbar" class="progress-bar bg-success" role="progressbar" aria-valuenow="0"
+                         aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="operations" class="row h-70">
+            <div class="col-12">
+
+                <div class="row h-50">
+                    <div class="col-12 text-center my-auto">
+                        <div id="square_hand_value">
+                            <span id="current_hand_value" class="text-default">?</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row h-50 {{ if eq .step.IsDisplayHands false }}d-none{{ end }}">
+                    <div class="col-6">
+                        <img id="left_hand" src="../../assets/abacus/images/hands/left0.png" class="float-right">
+                    </div>
+                    <div class="col-6">
+                        <img id="right_hand" src="../../assets/abacus/images/hands/right0.png" class="float-left">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="question" class="row h-70">
+            <div class="col-12 h-100">
+
+                <div class="row h-25">
+                    <div class="col-12 text-center my-auto">
+                        <div id="square_hand_value">
+                            <span id="hand_value" class="text-default">?</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row h-20">
+                    <div class="col-12 text-center my-auto">
+                        <span id="sign_equal">=</span>
+                    </div>
+                </div>
+
+                <div class="row h-20">
+                    <div class="col-12 text-center my-auto">
+                        <span id="operation_items">?</span>
+                    </div>
+                </div>
+
+                <div id="keyboard" class="row h-35 no-gutters">
+                    <div class="col-2 offset-1">
+                        <button class="btn btn-outline-violet btn-lg btn-block" data-value="0">0</button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-violet btn-lg btn-block" data-value="1">1</button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-violet btn-lg btn-block" data-value="2">2</button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-violet btn-lg btn-block" data-value="3">3</button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-violet btn-lg btn-block" data-value="4">4</button>
+                    </div>
+                    <div class="col-2 offset-1">
+                        <button class="btn btn-outline-violet btn-lg btn-block" data-value="5">5</button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-violet btn-lg btn-block" data-value="6">6</button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-violet btn-lg btn-block" data-value="7">7</button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-violet btn-lg  btn-block" data-value="8">8</button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-violet btn-lg btn-block" data-value="9">9</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row h-15">
+            <div class="col-4 text-center my-auto">
+                <button id="refresh" data-id="0" class="btn btn-lg btn-block bg-violet"><i
+                            class="fa fa-refresh fa-2x"></i></button>
+            </div>
+            <div class="col-8 text-center my-auto">
+                <button id="next" data-id="0" class="btn btn-lg btn-block bg-default"><i
+                            class="fa fa-arrow-right fa-2x"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="result" class="container-fluid h-100 d-none">
+        <div class="row h-15">
+            <div class="col-12 text-center my-auto">
+                <h1 id="encouragement">Congratulations</h1>
+            </div>
+        </div>
+
+        <div class="row h-70">
+            <div class="col-12 text-center my-auto">
+                <div class="portfolio-thumb">
+                    <img id="item-mask" class="item-mask" src="/assets/abacus/images/portfolio-mask.png" alt="" title="">
+                    <span class="step-order">{{ .step.Order }}</span>
+                </div>
+                <div id="stars">
+                    <p><i class="first fa fa-star fa-2x text-yellow"></i> <i class="second fa fa-star fa-2x text-yellow"></i> <i class="third fa fa-star fa-2x text-yellow"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row h-15">
+            <div class="col-4 text-center my-auto">
+                <button id="game-menu" onclick="goToURL('/jeu/');" data-id="0" class="btn btn-lg btn-block bg-yellow text-white"><i class="fa fa-list fa-2x"></i></button>
+            </div>
+            <div class="col-4 text-center my-auto">
+                <button id="game-refresh" onclick="refresh();" data-id="0" class="btn btn-lg btn-block bg-green text-white"><i class="fa fa-refresh fa-2x"></i></button>
+            </div>
+            <div class="col-4 text-center my-auto">
+                <button id="game-next" onclick="goToNextGame('{{ .step.Order }}');" data-id="0" class="btn btn-lg btn-block bg-violet text-white"><i class="fa fa-forward fa-2x"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src="/assets/abacus/js/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/assets/abacus/js/game.js"></script>
+
+    <script type="application/javascript">
+        $(function () {
+
+            let steps = {{ .step.Trains }};
+            let errorCounter = 0;
+
+            let index = parseInt($("#next").data("id"));
+            let train = getStepValueById(index);
+            let speed = 2000;
+            if (train.Speed > 0) {
+                speed = parseInt(train.Speed);
+            }
+
+            isAddition = !train.Operation.includes("-");
+            console.log("isAdd " + isAddition);
+
+            train.Operation = train.Operation.replace(/\-/g, '+-');
+
+            console.log("operation " + train.Operation);
+
+            let operationvalues = train.Operation.split("+");
+ 
+           /*
+            let totalValue = 0;
+
+            for(i=0; i<2; i++) {
+                console.log("Valeur = " + operationvalues[i]);
+
+                totalValue = (parseInt(totalValue) + parseInt( operationvalues[i]));
+
+                console.log(totalValue);
+                setTimeout(() => {changeValue("current_hand_value",  operationvalues[i]);}, 800);
+                setTimeout(() => {changeFingers(totalValue);}, 800);
+              
+            }
+           */
+
+        // operationvalues = shuffleArray(operationvalues);
+
+            // Affichage des valeurs de l'opération
+             let totalValue = 0;
+             operationvalues.forEach((value, i) => {
+                  setTimeout(() => {
+                      console.log("Valeur = " + value);
+                      console.log("first part Step " + i);
+                      totalValue = (parseInt(totalValue) + parseInt(value));
+
+                     console.log(totalValue);
+                     setTimeout(() => {changeValue("current_hand_value", value);}, 800);
+                      setTimeout(() => {changeFingers(totalValue);}, 800);
+                  }, i * speed);
+           });
+
+            // Une fois les valeurs affiché on affiche le clavier
+            setTimeout(() => {
+                $("#operations").fadeOut( 0, function () {
+                    $("#question").fadeIn( 0);
+                    $("#refresh").fadeIn( 0);
+                    $("#next").fadeIn( 0);
+                });
+            }, operationvalues.length * speed);
+
+            $("#next").data("id", index);
+
+            $("#refresh").click(function () {
+                refreshActualValue();
+            });
+
+            $("#next").click(function () {
+                let index = parseInt($(this).data("id"));
+                if ($(this).hasClass("bg-default")) {
+                    let choosedValue = parseInt($("#hand_value").data("value"));
+                    let value = getStepValueById(index).Result;
+                    let isSuccess = false;
+                    if (choosedValue === parseInt(value)) {
+                        isSuccess = true;
+                        $("#next > i").toggleClass('fa-arrow-right fa-check', 250);
+                        $("#next").toggleClass('bg-default bg-success', 250);
+                        $("#hand_value").toggleClass('text-default text-success', 250);
+                    } else {
+                        errorCounter++;
+                        $("#next").toggleClass('bg-default bg-danger', 250);
+                        $("#hand_value").toggleClass('text-default text-danger', 250);
+                        changeValue("hand_value", value);
+                    }
+
+                    $("#refresh").animate({"opacity": "toggle"});
+
+                    $("#keyboard button").each(function () {
+                        $(this).addClass('disabled');
+                    });
+                    changeExerciseProgressbar(index, getNumberOfSteps(), isSuccess);
+                    if (isLastStep(index)) {
+                        $("#calcul").hide();
+                        $("#result").removeClass('d-none');
+                        setStars(errorCounter);
+                        setResult({{.step.ID}}, errorCounter);
+                        setEncouragement(errorCounter);
+                    }
+                } else {
+                    $("#refresh").fadeOut( 0);
+                    $("#next").fadeOut( 0);
+                    $("#question").fadeOut( 0, function () {
+                        $("#operations").fadeIn( 0);
+                    });
+
+                    $("#next > i").removeClass('fa-check', 250);
+                    $("#next > i").addClass('fa-arrow-right', 250);
+
+                    $("#next").removeClass('bg-danger', 250);
+                    $("#next").removeClass('bg-success', 250);
+                    $("#next").addClass('bg-default', 250);
+
+                    $("#hand_value").removeClass('text-danger', 250);
+                    $("#hand_value").removeClass('text-success', 250);
+                    $("#hand_value").addClass('text-default', 250);
+                    $("#hand_value").html("?");
+
+
+                    let index = parseInt($("#next").data("id"));
+                    let train = getNextStepValueById(index);
+                    let speed = 1000;
+                    if (train.Speed > 0) {
+                        speed = parseInt(train.Speed);
+                    }
+
+                    $("#next").data("id", index + 1);
+
+                    train.Operation = train.Operation = train.Operation.replace(/\-/g, '+-');
+                    let operationvalues = train.Operation.split("+");
+                   //operationvalues = shuffleArray(operationvalues);
+
+                    // Affichage des valeurs de l'opération
+                    let totalValue = 0;
+                    operationvalues.forEach((value, i) => {
+                        setTimeout(() => {
+                            console.log("second part Step " + i);
+                            totalValue = (isAddition) ? (parseInt(totalValue) + parseInt(value)) : (parseInt(totalValue) - parseInt(value));
+                            changeValue("current_hand_value", value);
+                            changeFingers(totalValue);
+                        }, i * speed);
+                    });
+
+                    // Une fois les valeurs affiché on affiche le clavier
+                    setTimeout(() => {
+                        $("#operations").fadeOut( 0, function () {
+                            $("#question").fadeIn( 0);
+                            $("#refresh").fadeIn( 0);
+                            $("#next").fadeIn( 0);
+                        });
+                    }, operationvalues.length * speed);
+
+                    $("#keyboard button").each(function () {
+                        $(this).removeClass('disabled');
+                    });
+                }
+
+            });
+
+            // Changement de l'affichage de la valeur saisie
+            $("#keyboard button").click(function () {
+                if (!$(this).hasClass("disabled")) {
+                    let pressedValue = parseInt($(this).data("value"));
+
+                    let index = parseInt($("#next").data("id"));
+                    let value = parseInt(getStepResultById(index));
+
+                    let handEl = $("#hand_value");
+                    let actualValue = parseInt(handEl.data("value"));
+                    if (isNaN(actualValue)) {
+                        actualValue = "";
+                    }
+                    if (value > 9) {
+                        if (actualValue > 9 ) {
+                            handEl.html(pressedValue);
+                            handEl.data("value", pressedValue);
+                        } else {
+                            handEl.html(actualValue.toString() + pressedValue.toString());
+                            handEl.data("value", actualValue.toString() + pressedValue.toString());
+                        }
+                    } else {
+                        handEl.html(pressedValue);
+                        handEl.data("value", pressedValue);
+                    }
+                }
+            });
+
+            // Refresh valeur saisie
+            function refreshActualValue() {
+                let handEl = $("#hand_value");
+                handEl.html("?");
+                handEl.data("value", "");
+            }
+
+            // Retourne la valeur de l'étape courrante
+            function getStepValueById(id) {
+                return steps[0].Children[id];
+            }
+
+            // Retourne la valeur de l'étape courrante
+            function getStepResultById(id) {
+                return steps[0].Children[id]["Result"];
+            }
+
+            // Retourne la valeur de la prochaine étape
+            function getNextStepValueById(id) {
+                return steps[0].Children[id + 1];
+            }
+
+            // Retourne le nomnbre d'étape dans la lesson
+            function getNumberOfSteps() {
+                return parseInt(steps[0].Children.length);
+            }
+
+            // Retourne true si on est à la dernière étape
+            function isLastStep(currentIndexStep) {
+                return (currentIndexStep === getNumberOfSteps() - 1);
+            }
+        });
+    </script>
+
+    </body>
+
+    </html>
+{{end}}

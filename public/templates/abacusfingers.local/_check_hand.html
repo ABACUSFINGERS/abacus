@@ -1,0 +1,310 @@
+
+
+{{define "base.html"}}
+
+    <!DOCTYPE HTML>
+    <!--[if IE 7 ]>
+    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+    <!--[if IE 8 ]>
+    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+    <!--[if IE 9 ]>
+    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <html lang="fr-fr" class="no-js">
+    <!--<![endif]-->
+
+    <head>
+        <meta http-equiv="content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>TODO</title>
+        <meta name="author" content="flycode">
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/abacus/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/abacus/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/abacus/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/abacus/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/abacus/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/abacus/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/abacus/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/abacus/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/abacus/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/abacus/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/abacus/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/abacus/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/abacus/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/assets/abacus/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <link href="/assets/abacus/css/custom.css" rel="stylesheet" type="text/css">
+        <!--[if IE 7]>
+        <link href="/assets/abacus/css/font-awesome-ie7.css" rel="stylesheet" type="text/css">
+        <![endif]-->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic'
+              rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+              rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body class="main">
+    <div id="write_number" class="container-fluid h-100">
+
+        {{template "menutoolbar" .}}
+
+        <div class="row h-15">
+            <div class="col-12 text-center my-auto">
+                <div id="progressbar-container" class="progress">
+                    <div id="progressbar" class="progress-bar bg-success" role="progressbar" aria-valuenow="0"
+                         aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row h-70">
+            <div class="col-12">
+
+                <div class="row h-15">
+                    <div class="col-12 text-center my-auto">
+                        <div id="square_hand_value">
+                            <span id="hand_value" class="text-default">?</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row h-15">
+                    <div class="col-12 text-center my-auto">
+                        <span id="sign_equal">=</span>
+                    </div>
+                </div>
+
+                <div class="row h-10">
+                </div>
+
+                <div id="possibility1" class="possibility row h-20 options">
+                    <div class="col-4 offset-1">
+                        <img id="left_hand1" src="../../assets/abacus/images/hands/left0.png" class="float-right checkbox-hand">
+                    </div>
+                    <div class="col-4">
+                        <img id="right_hand1" src="../../assets/abacus/images/hands/right0.png" class="float-left checkbox-hand">
+                    </div>
+                    <div class="col-2 my-auto">
+                        <input type="radio" name="radioHand" value="" id="radio1" class="form-radio radio-default">
+                    </div>
+                </div>
+
+                <div id="possibility2" class="possibility row h-20">
+                    <div class="col-4 offset-1">
+                        <img id="left_hand2" src="../../assets/abacus/images/hands/left0.png" class="float-right checkbox-hand">
+                    </div>
+                    <div class="col-4">
+                        <img id="right_hand2" src="../../assets/abacus/images/hands/right0.png" class="float-left checkbox-hand">
+                    </div>
+                    <div class="col-2 my-auto">
+                        <input type="radio" name="radioHand" value="" id="radio2" class="form-radio radio-default">
+                    </div>
+                </div>
+
+                <div id="possibility3" class="possibility row h-20">
+                    <div class="col-4 offset-1">
+                        <img id="left_hand3" src="../../assets/abacus/images/hands/left0.png" class="float-right checkbox-hand">
+                    </div>
+                    <div class="col-4">
+                        <img id="right_hand3" src="../../assets/abacus/images/hands/right0.png" class="float-left checkbox-hand">
+                    </div>
+                    <div class="col-2 my-auto">
+                        <input type="radio" name="radioHand" value="" id="radio3" class="form-radio radio-default">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row h-15">
+            <div class="col-12 text-center my-auto">
+                <button id="next" data-id="0" class="btn btn-lg btn-block bg-default"><i
+                            class="fa fa-arrow-right fa-2x"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="result" class="container-fluid h-100 d-none">
+        <div class="row h-15">
+            <div class="col-12 text-center my-auto">
+                <h1 id="encouragement">Congratulations</h1>
+            </div>
+        </div>
+
+        <div class="row h-70">
+            <div class="col-12 text-center my-auto">
+                <div class="portfolio-thumb">
+                    <img id="item-mask" class="item-mask" src="/assets/abacus/images/portfolio-mask.png" alt="" title="">
+                    <span class="step-order">{{ .step.Order }}</span>
+                </div>
+                <div id="stars">
+                    <p><i class="first fa fa-star fa-2x text-yellow"></i> <i class="second fa fa-star fa-2x text-yellow"></i> <i class="third fa fa-star fa-2x text-yellow"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row h-15">
+            <div class="col-4 text-center my-auto">
+                <button id="game-menu" onclick="goToURL('/jeu/');" data-id="0" class="btn btn-lg btn-block bg-yellow text-white"><i class="fa fa-list fa-2x"></i></button>
+            </div>
+            <div class="col-4 text-center my-auto">
+                <button id="game-refresh" onclick="refresh();" data-id="0" class="btn btn-lg btn-block bg-green text-white"><i class="fa fa-refresh fa-2x"></i></button>
+            </div>
+            <div class="col-4 text-center my-auto">
+                <button id="game-next" onclick="goToNextGame('{{ .step.Order }}');" data-id="0" class="btn btn-lg btn-block bg-violet text-white"><i class="fa fa-forward fa-2x"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src="/assets/abacus/js/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/assets/abacus/js/game.js"></script>
+
+    <script type="application/javascript">
+        $(function () {
+
+            let steps = {{ .step.Lessons }};
+            let errorCounter = 0;
+
+            let index = parseInt($("#next").data("id"));
+            $("#next").data("id", index);
+
+            let values = [];
+            let value = getStepValueById(index);
+            values.push(value);
+
+            $("#hand_value").html(value);
+
+            let trueSuffixID = getRandomInt(1, 3);
+            $(".possibility").each(function () {
+                var currentID = $(this).attr('id');
+                if (currentID !== "possibility" + trueSuffixID) {
+                    if (value < 10) {
+                        var randomValue = getRandomInt(0, 9, values);
+                    } else {
+                        var randomValue = getRandomInt(0, 99, values);
+                    }
+                    values.push(randomValue);
+                    changeFingers(randomValue, currentID.replace("possibility", ""));
+                    $(this).find( "input:radio" ).val(randomValue);
+                } else {
+                    changeFingers(value, trueSuffixID);
+                    $(this).find( "input:radio" ).val(value);
+                }
+            });
+
+
+            $("#next").click(function () {
+                let index = parseInt($(this).data("id"));
+                if ($(this).hasClass("bg-default")) {
+                    let choosedValue = parseInt($('input[name=radioHand]:checked').val());
+                    let value = getStepValueById(index);
+                    let isSuccess = false;
+                    if (choosedValue === parseInt(value)) {
+                        isSuccess = true;
+                        $("#next > i").toggleClass('fa-arrow-right fa-check', 250);
+                        $("#next").toggleClass('bg-default bg-success', 250);
+                        $('input[name=radioHand]:checked').toggleClass('radio-default radio-success', 250);
+                    } else {
+                        errorCounter++;
+                        $(":radio[value=" + value + "]").attr('checked',true);
+                        $(":radio[value=" + value + "]").toggleClass('radio-default radio-danger', 250);
+                        $("#next").toggleClass('bg-default bg-danger', 250);
+                    }
+
+                    changeExerciseProgressbar(index, getNumberOfSteps(), isSuccess);
+                    if (isLastStep(index)) {
+                        $("#write_number").hide();
+                        $("#result").removeClass('d-none');
+                        setStars(errorCounter);
+                        setResult({{.step.ID}}, errorCounter);
+                        setEncouragement(errorCounter);
+                    }
+                } else {
+
+                    $(':radio').each(function () {
+                        $(this).prop('checked', false);
+                    });
+
+                    $("#next > i").removeClass('fa-check', 250);
+                    $("#next > i").addClass('fa-arrow-right', 250);
+
+                    $("#next").removeClass('bg-danger', 250);
+                    $("#next").removeClass('bg-success', 250);
+                    $("#next").addClass('bg-default', 250);
+
+                    let index = parseInt($("#next").data("id"));
+                    let value = getStepValueById(index);
+                    $(":radio[value=" + value + "]").prop('checked', false);
+                    $(":radio[value=" + value + "]").removeClass('radio-danger', 250);
+                    $(":radio[value=" + value + "]").removeClass('radio-success', 250);
+
+                    value = getNextStepValueById(index);
+
+                    let trueSuffixID = getRandomInt(1, 3);
+                    $(".possibility").each(function () {
+                        var currentID = $(this).attr('id');
+                        if (currentID !== "possibility" + trueSuffixID) {
+                            if (value < 10) {
+                                var randomValue = getRandomInt(0, 9, value);
+                            } else {
+                                var randomValue = getRandomInt(0, 99, value);
+                            }
+                            changeFingers(randomValue, currentID.replace("possibility", ""));
+                            $(this).find( "input:radio" ).val(randomValue);
+                        } else {
+                            changeFingers(value, trueSuffixID);
+                            $(this).find( "input:radio" ).val(value);
+                        }
+                    });
+
+                    $("#hand_value").html(value);
+                    $("#next").data("id", index + 1);
+                }
+
+            });
+
+            // Retourne la valeur de l'étape courrante
+            function getStepValueById(id) {
+                return steps[0].Children[id];
+            }
+
+            // Retourne la valeur de la prochaine étape
+            function getNextStepValueById(id) {
+                return steps[0].Children[id + 1];
+            }
+
+            // Retourne le nomnbre d'étape dans la lesson
+            function getNumberOfSteps() {
+                return parseInt(steps[0].Children.length);
+            }
+
+            // Retourne true si on est à la dernière étape
+            function isLastStep(currentIndexStep) {
+                return (currentIndexStep === getNumberOfSteps() - 1);
+            }
+        });
+    </script>
+
+    </body>
+
+    </html>
+{{end}}

@@ -1,0 +1,40 @@
+.theme-dark .paper-card {
+    background: #272c33;
+    color: #ddd;
+}
+
+tbody#meta_table button {
+    margin-left: 10px;
+}
+
+.btn-primary{
+    background-color: #15B3C4;
+}
+
+.error{
+    text-align: center;
+    color: red;
+}
+
+.theme-dark .form-control {
+    color: #ddd;
+}
+
+.theme-dark .ql-snow .ql-stroke {
+    stroke: #ddd;
+}
+
+.theme-dark .ql-snow .ql-picker {
+    color: #ddd;
+}
+
+.success_message{
+    color: green;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.error_message{
+    color: red;
+    margin-left: 20px;
+    font-weight: bold;
+}

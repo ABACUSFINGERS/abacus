@@ -1,0 +1,50 @@
+{{ define "body" }}
+
+    <div id="main" class="home-game">
+
+        <div class="container">
+            <!--primary starts-->
+            <section id="primary" class="content-full-width">
+                <div class="dt-sc-sorting-container">
+                    <a href="#" title="" class="active-sort" data-filter="*"> Tout ({{ len .steps}}) </a>
+                    {{ range $step_type := .steps_type }}
+                        <a href="#" title="" data-filter=".{{ $step_type.Type }}"> {{ $step_type.GameType }} </a>
+                    {{ end }}
+                </div>
+                <div class="dt-sc-portfolio-container">
+                    {{ range $step := .steps }}
+                        <div class="portfolio dt-sc-one-third column all {{ $step.Type }}">
+                            <p class="pt-2">
+                                <i class="star-left fa-star fa {{ if (ge $step.Note 1) }}check{{end}} fa-2x"></i>
+                                <i class="star-center fa-star fa {{ if (ge $step.Note 2) }}check{{end}} fa-2x"></i>
+                                <i class="star-right fa-star fa {{ if (ge $step.Note 3) }}check{{end}} fa-2x"></i>
+                            </p>
+                            <a href="/jeu/?id={{ $step.ID }}" rel="nofollow">
+                                <div class="portfolio-thumb">
+                                    <img class="item-mask" src="/assets/abacus/images/portfolio-mask.png" alt="" title="">
+                                    {{ if $step.IsChallenge }}
+                                        <span class="step-order challenge">{{ $step.ChallengeName }}</span>
+                                    {{ else }}
+                                        <span class="step-order">{{ $step.Order }}</span>
+                                    {{ end }}
+                                </div>
+                                <div class="portfolio-detail">
+                                    <div class="portfolio-title tooltip">
+                                        <h5 class="txt-ellipsis">
+                                            <a href="/jeu/?id={{ $step.ID }}" rel="nofollow"> {{ $step.Title }} </a>
+                                        </h5>
+                                        <span class="tooltiptext bg-violet">
+                                                {{ $step.Title }}
+                                        </span>
+                                        <p>{{ $step.GameType }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {{ end }}
+                </div>
+            </section>
+        </div>
+    </div>
+
+{{ end }}

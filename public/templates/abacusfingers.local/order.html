@@ -1,0 +1,131 @@
+{{define "body"}}
+    <script src="https://js.stripe.com/v3/"></script>
+    <div id="main">
+        <div class="breadcrumb-section">
+            <div class="container">
+                <h1>Commander : abonnement {{ .subscription_item.DayDuration}} jours</h1>
+            </div>
+        </div>
+        <div class="container">
+            <section id="order" class="content-full-width">
+                <div class="dt-sc-hr">
+                    <div class="column dt-sc-one-third first">
+
+                        <div class="dt-sc-pr-tb-col">
+                            <div class="dt-sc-tb-header">
+                                <h4 class="dt-sc-price text-green">Détail</h4>
+                            </div>
+                            <ul class="dt-sc-tb-content">
+                                {{ range $description := .subscription_item.Descriptions}}
+                                    <li>{{ $description }}</li>
+                                {{ end }}
+                            </ul>
+                            <div class="dt-sc-buy-now text-green"><h4>Prix total {{ .subscription_item.Price}}€</h4></div>
+                        </div>
+
+
+                    </div>
+                    <div class="column dt-sc-two-third contact_form_outer">
+                        <form id="order-form" class="contact-form" method="POST" action="#">
+                            <h2 class="text-green">Information de facturation</h2>
+                            <p>
+                                <input id="lastname" name="lastname" type="text"
+                                       placeholder="Votre nom" required>
+                            </p>
+                            <p>
+                                <input id="postal_address" name="postal_address" type="text"
+                                       placeholder="Adresse postal" required>
+                            </p>
+                            <p>
+                                <input id="postal_address_complement" name="postal_address_complement" type="text"
+                                       placeholder="Adresse postal (complément)" required>
+                            </p>
+                            <p>
+                                <input id="city" name="city" type="text" placeholder="Ville" required>
+                            </p>
+                            <p>
+                                <input id="postal_code" name="postal_code" type="text" placeholder="Code postal" required>
+                            </p>
+                            <p>
+                                <input id="email" name="email" type="text" placeholder="Adresse email" required>
+                            </p>
+                            <p>
+                                <input id="phone" name="phone" type="text" placeholder="Numéro de téléphone" required>
+                            </p>
+
+                            <input type="hidden" value="{{ .subscription_item.Type}}" name="order_type"/>
+                            <div id="card-element"
+                                 style="background: rgba(255,255,255,1);border: 1px solid #eaeaea;padding:15px">
+                                <!-- A Stripe Element will be inserted here. -->
+                            </div>
+
+                            <div class="text-center">
+                                <input type="button" class="dt-sc-button xlarge"
+                                       name="checkout-place-order" id="checkout-place-order"
+                                       value="Payer {{ .subscription_item.Price}}€"
+                                       data-value="Place order"
+                                       data-secret="{{$.client_secret}}">
+                            </div>
+
+                            <!-- Used to display form errors. -->
+                            <div id="card-errors" role="alert" style="color: #FF0000;margin: 0 15px 15px 15px;"></div>
+
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="application/javascript">
+        var stripe = Stripe('{{ $.stripe_pk }}');
+        var elements = stripe.elements();
+        var style = {
+            base: {
+                color: '#32325d',
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': {
+                    color: '#aab7c4'
+                }
+            },
+            invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a'
+            }
+        };
+        var cardElement = elements.create('card', {style: style});
+        cardElement.mount('#card-element');
+
+        var cardholderName = document.getElementById('lastname');
+        var cardButton = document.getElementById('checkout-place-order');
+        var clientSecret = cardButton.dataset.secret;
+
+        cardButton.addEventListener('click', function (ev) {
+            stripe.handleCardPayment(
+                clientSecret, cardElement, {
+                    payment_method_data: {
+                        billing_details: {
+                            name: cardholderName.value,
+                            "address": {
+                                "city": document.getElementById("city").value,
+                                "country": "FR",//TODO: dynamiser si vente à l'internationnal
+                                "line1": document.getElementById("postal_address").value,
+                                "line2": document.getElementById("postal_address_complement").value,
+                                "postal_code": document.getElementById("postal_code").value,
+                            },
+                            "email": document.getElementById("email").value,
+                            "phone": document.getElementById("phone").value,
+                        }
+                    }
+                }
+            ).then(function (result) {
+                if (result.error) {
+                    alert("Problème d'authenfication avec votre banque");
+                } else {
+                    document.getElementById("order-form").submit();
+                }
+            });
+        });
+    </script>
+{{end}}
