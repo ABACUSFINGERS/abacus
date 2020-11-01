@@ -22,7 +22,9 @@ func Front(e *echo.Echo) {
 
 	e.GET("/nous-contacter", ContactController)
 	e.GET("/nous-contacter/", ContactController)
-	e.POST("/sendmail", PContactController)
+    e.POST("/sendmail", PContactController) 
+
+	
 
 	e.GET("/jeu", GameController)
 	e.GET("/jeu/", GameController)

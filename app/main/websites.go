@@ -12,6 +12,7 @@ import (
 	"time"
 )
 
+// Thread fil d'execution d'une séquence d'instructions
 func main() {
 	_ = godotenv.Load(".env")
 

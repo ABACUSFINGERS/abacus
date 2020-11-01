@@ -375,22 +375,28 @@
                     let pressedValue = parseInt($(this).data("value"));
 
                     let index = parseInt($("#next").data("id"));
-                    let value = parseInt(getStepResultById(index));
 
                     let handEl = $("#hand_value");
-                    let actualValue = parseInt(handEl.data("value"));
+
+                    let actualValue = parseInt(handEl.data("value"));  
+
                     if (isNaN(actualValue)) {
+                        console.log("isNaN(actualValue)");
                         actualValue = "";
                     }
-                    if (value > 9) {
-                        if (actualValue > 9 ) {
-                            handEl.html(pressedValue);
-                            handEl.data("value", pressedValue);
-                        } else {
+
+                    let valueResulat = parseInt(getStepResultById(index));
+
+                    let longueurResultat = valueResulat.toString().length;
+                    let longueurActualValue = actualValue.toString().length;
+
+                    console.log("longeurResultat ="+longueurResultat+" longeurActualValue= "+longueurActualValue );
+
+                    if (longueurActualValue < longueurResultat ) {
                             handEl.html(actualValue.toString() + pressedValue.toString());
                             handEl.data("value", actualValue.toString() + pressedValue.toString());
-                        }
-                    } else {
+                    }
+                    else {
                         handEl.html(pressedValue);
                         handEl.data("value", pressedValue);
                     }
@@ -413,13 +419,13 @@
             function getStepResultById(id) {
                 return steps[0].Children[id]["Result"];
             }
-
+            
             // Retourne la valeur de la prochaine étape
             function getNextStepValueById(id) {
                 return steps[0].Children[id + 1];
             }
 
-            // Retourne le nomnbre d'étape dans la lesson
+            // Retourne le nombre d'étape dans la lesson
             function getNumberOfSteps() {
                 return parseInt(steps[0].Children.length);
             }

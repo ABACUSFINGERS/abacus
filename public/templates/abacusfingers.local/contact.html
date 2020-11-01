@@ -9,12 +9,6 @@
     Message envoyé
 </div>
 
-{{else if .message }}
-
-
-<div>
-    Desolé votre Message n'a pas pu etre envoyé
-</div>
 
 {{ end }}
 
@@ -29,7 +23,7 @@
         <div class="container">
             <section id="primary" class="content-full-width">
                 <div class="column dt-sc-three-fourth first contact_form_outer">
-                    <form name="frcontact" class="contact-form" method="post" action="#">
+                    <form  method="post" name="frcontact" class="contact-form">
                         <h2>Laissez nous un message et nous vous répondrons !</h2>
                         <p class="column dt-sc-one-third first">
                             <input id="name" name="name" type="text" placeholder="Nom" required="">
@@ -44,7 +38,7 @@
                             <textarea id="comment" name="comment" placeholder="Message"></textarea>
                         </p>
                         <p>
-                            <input name="submit" type="submit" id="submit" class="dt-sc-button medium" value="Envoyer">
+                            <input name="submit2" type="submit" id="submit2" class="dt-sc-button medium" value="Envoyer">
                         </p>
                     </form>
                 </div>

@@ -4,9 +4,9 @@ import (
 	"../../models"
 	"../../tools/debug"
 	"github.com/labstack/echo"
-	"net/http"
-	"log"
-	"net/smtp"
+    "net/http"
+	// "log"
+   "net/smtp"
 	"os"
 )
 
@@ -34,14 +34,25 @@ func ContactController(c echo.Context) error {
 }
 
 
+
+
 func PContactController(c echo.Context) error {  
 
-	debug.Log("front<PContactController>")
+
+	//  w.Header().Set("Access-Control-Allow-Origin", "*")
+
 	
 	name      := c.FormValue("name")
 	email     := c.FormValue("email")
 	subject   := c.FormValue("subject")
 	comment   := c.FormValue("comment")
+
+  	
+
+	debug.Log("front<PContactController>  ----> "+name)
+	debug.Log("front<PContactController>  ----> "+email)
+	debug.Log("front<PContactController>  ----> "+subject)
+	debug.Log("front<PContactController>  ----> "+comment)
 
 	var site models.Site
 
@@ -53,14 +64,21 @@ func PContactController(c echo.Context) error {
 	to := []string{"abacusfingers@gmail.com"}
 
 	msg := []byte("To: "+"abacusfingers@gmail.com"+"\r\n" +
-		"Subject: "+subject+"\r\n" +
+		"Subject: "+"subject"+"\r\n" +
 		"\r\n" +
-		"name= "+name+" email=  "+email+"comment ="+comment+ "\r\n")
+		"name= "+"name"+" email=  "+"email"+"comment ="+"comment"+ "\r\n")
 
-	err := smtp.SendMail("smtp.gmail.com:465", auth, "abacusfingers@gmail.com", to, msg)
+   debug.Log("msg -------------------------")
+
+     err := smtp.SendMail("smtp.gmail.com:25", auth, "abacusfingers@gmail.com", to, msg)
+	
+	
+
+	debug.Log("msg  22222 -------------------------")
 
 	if err != nil {
-		log.Fatal(err)
+		debug.Log("ERREUR -------------------------")
+		/// log.Fatal(err)
 		return c.Render(http.StatusOK, site.Host+"abacusfingers.local<contact>", map[string]interface{}{
 			"message":  false,
 		});

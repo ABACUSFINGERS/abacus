@@ -72,25 +72,27 @@
         <div class="row h-75">
             <div class="col-12 h-100">
 
-                <div class="row h-15">
+            <!--    <div class="row h-10">
                     <div class="col-12 text-center">
                         <h2>{{ .step.Subtitle }} :</h2>
                     </div>
                 </div>
+           
 
                 <div class="row h-15">
                     <div class="col-12 text-center my-auto">
                         <span id="formula_result" class="text-yellow">?</span>
                     </div>
                 </div>
+                 -->
 
-                <div class="row h-10">
+                <div class="row h-15">
                     <div class="col-12 text-center my-auto">
                         <h2>Saisir la bonne règle :</h2>
                     </div>
                 </div>
 
-                <div class="row h-25">
+                <div class="row h-46">
                     <div class="col-8 offset-2 text-center" id="formula_ask">
                     </div>
                 </div>
@@ -176,14 +178,18 @@
             });
 
             $("#next").click(function () {
+
                 let index = parseInt($(this).data("id"));
                 if ($(this).hasClass("bg-default")) {
+
+                    console.log("VERTE")
+
                     let isSuccess = false;
                     let responses = [];
                     $('[id^=formula_ask_]').each(function () {
                         responses.push($(this).attr('data-value'));
                     });
-                    let results = value.Operation.match(/.{1,2}/g);
+                    let results = value.Operation.match(/.{1,3}/g);
 
                     for (let i = 0; i < results.length; i++) {
                         results[i] = parseInt(results[i]);
@@ -228,6 +234,9 @@
                         setEncouragement(errorCounter);
                     }
                 } else {
+
+                    console.log("ROUGE")
+
                     $("#refresh").animate({"opacity": "toggle"});
                     $("#next > i").removeClass('fa-check', 250);
                     $("#next > i").addClass('fa-arrow-right', 250);
@@ -241,10 +250,12 @@
                     $("#hand_value").addClass('text-default', 250);
                     $("#hand_value").html("?");
 
+                    console.log("L253")
                     let index = parseInt($("#next").data("id"));
                     let value = getNextStepValueById(index);
                     changeFingers(value);
                     $("#next").data("id", index + 1);
+                    console.log("L258")
 
                     $("#keyboard button").each(function () {
                         $(this).removeClass('disabled');
@@ -254,7 +265,7 @@
             });
 
             // Changement de l'affichage de la valeur saisie
-            $(document).on("click", "#keyboard button", function () {
+            $(document).on("click", "#keyboard button", function  () {
                 if (!$(this).hasClass("disabled")) {
                     let pressedValue = parseInt($(this).data("value"));
                     let el;
@@ -322,7 +333,7 @@
             function initializeInputs(operations) {
                 let inputs = '<span id="formula_operation_result" class="text-yellow">?</span> =';
                 let input = '<span class="square text-default" data-value="-value-">?</span>';
-                let formula_operations = value.Operation.match(/.{1,2}/g);
+                let formula_operations = value.Operation.match(/.{1,3}/g);
                 for (let i = 0; i < formula_operations.length; i++) {
                     inputs += '<span id="formula_ask_' + i + '" data-value="?" class="square text-default" data-value="' + formula_operations[i] + '">?</span>';
                 }

@@ -815,7 +815,7 @@ func InitializeGames(db *gorm.DB) {
 		db.Save(&lesson)
 
 		step = models.Step{
-			Title:          "Tutoriel des nombres de 0 à 5",
+			Title:          "Tutoriel des nombres de 10 à 50",
 			Subtitle:       "Faire défiler l'image des doigts et des chiffres de 10 à 50. Une voix énonce les chiffres afin de les reconnaitres.",
 			Order:          11,
 			IsFree:         false,
@@ -1760,7 +1760,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+5-4",
+			Operation:  "+05-04",
 			Result:     "+1",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -1770,7 +1770,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+5-3",
+			Operation:  "+05-03",
 			Result:     "+2",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -1780,7 +1780,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+5-2",
+			Operation:  "+05-02",
 			Result:     "+3",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -1790,7 +1790,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+5-1",
+			Operation:  "+05-01",
 			Result:     "+4",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -2114,7 +2114,7 @@ func InitializeGames(db *gorm.DB) {
 		
 				trainChild = models.TrainChild{
 					TrainRefer: train.ID,
-					Operation:  "-5+4",
+					Operation:  "-05+04",
 					Result:     "-1",
 					Speed:      0,
 					CreatedAt:  time.Time{},
@@ -2124,7 +2124,7 @@ func InitializeGames(db *gorm.DB) {
 		
 				trainChild = models.TrainChild{
 					TrainRefer: train.ID,
-					Operation:  "-5+3",
+					Operation:  "-05+03",
 					Result:     "-2",
 					Speed:      0,
 					CreatedAt:  time.Time{},
@@ -2134,7 +2134,7 @@ func InitializeGames(db *gorm.DB) {
 		
 				trainChild = models.TrainChild{
 					TrainRefer: train.ID,
-					Operation:  "-5+2",
+					Operation:  "-05+02",
 					Result:     "-3",
 					Speed:      0,
 					CreatedAt:  time.Time{},
@@ -2144,7 +2144,7 @@ func InitializeGames(db *gorm.DB) {
 		
 				trainChild = models.TrainChild{
 					TrainRefer: train.ID,
-					Operation:  "-5+1",
+					Operation:  "-05+01",
 					Result:     "-4",
 					Speed:      0,
 					CreatedAt:  time.Time{},
@@ -2527,7 +2527,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+10-9",
+			Operation:  "+10-09",
 			Result:     "+1",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -2537,7 +2537,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+10-8",
+			Operation:  "+10-08",
 			Result:     "+2",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -2547,7 +2547,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+10-7",
+			Operation:  "+10-07",
 			Result:     "+3",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -2557,7 +2557,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+10-6",
+			Operation:  "+10-06",
 			Result:     "+4",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -2567,7 +2567,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+10-5",
+			Operation:  "+10-05",
 			Result:     "+5",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -2577,7 +2577,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+10-4",
+			Operation:  "+10-04",
 			Result:     "+6",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -2587,7 +2587,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+10-3",
+			Operation:  "+10-03",
 			Result:     "+7",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -2597,7 +2597,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+10-2",
+			Operation:  "+10-02",
 			Result:     "+8",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -2607,7 +2607,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+10-1",
+			Operation:  "+10-01",
 			Result:     "+9",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -2617,7 +2617,7 @@ func InitializeGames(db *gorm.DB) {
 
 		lesson = models.Lesson{
 			StepRefer: step.ID,
-			Children:  []string{"+1", "+2", "+3", "+4", "+5", "-1", "-2", "-3", "-4", "-5"},
+			Children:  []string{"+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9", "+10", "-1", "-2", "-3", "-4", "-5", "-6", "-7", "-8", "-9", "-10"},
 			CreatedAt: time.Time{},
 		}
 
@@ -3149,8 +3149,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-10+9",
-			Result:     "-1",
+			Operation:  "-10+09",
+			Result:     "-1	",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -3159,7 +3159,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-10+8",
+			Operation:  "-10+08",
 			Result:     "-2",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -3169,7 +3169,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-10+7",
+			Operation:  "-10+07",
 			Result:     "-3",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -3179,7 +3179,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-10+6",
+			Operation:  "-10+06",
 			Result:     "-4",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -3189,7 +3189,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-10+5",
+			Operation:  "-10+05",
 			Result:     "-5",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -3199,7 +3199,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-10+4",
+			Operation:  "-10+04",
 			Result:     "-6",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -3209,8 +3209,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-10+7",
-			Result:     "-3",
+			Operation:  "-10+03",
+			Result:     "-7",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -3219,8 +3219,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-10+8",
-			Result:     "-2",
+			Operation:  "-10+02",
+			Result:     "-8",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -3229,8 +3229,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-10+9",
-			Result:     "-1",
+			Operation:  "-10+01",
+			Result:     "-9",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -3239,7 +3239,7 @@ func InitializeGames(db *gorm.DB) {
 
 		lesson = models.Lesson{
 			StepRefer: step.ID,
-			Children:  []string{"+1", "+2", "+3", "+4", "+5", "-1", "-2", "-3", "-4", "-5"},
+			Children:  []string{"+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9", "+10", "-1", "-2", "-3", "-4", "-5", "-6", "-7", "-8", "-9", "-10"},
 			CreatedAt: time.Time{},
 		}
 
@@ -3571,18 +3571,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "5(+9)",
-			Result:     "14",
-			Speed:      0,
-			CreatedAt:  time.Time{},
-		}
-
-		db.Save(&trainChild)
-
-		trainChild = models.TrainChild{
-			TrainRefer: train.ID,
-			Operation:  "5(+8)",
-			Result:     "13",
+			Operation:  "5(+6)",
+			Result:     "11",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -3601,8 +3591,18 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "5(+6)",
-			Result:     "11",
+			Operation:  "5(+8)",
+			Result:     "13",
+			Speed:      0,
+			CreatedAt:  time.Time{},
+		}
+
+		db.Save(&trainChild)
+
+		trainChild = models.TrainChild{
+			TrainRefer: train.ID,
+			Operation:  "5(+9)",
+			Result:     "14",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -3702,7 +3702,7 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "+10-5+1",
+			Operation:  "+10-05+01",
 			Result:     "+6",
 			Speed:      0,
 			CreatedAt:  time.Time{},
@@ -3712,8 +3712,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-5+3",
-			Result:     "-2",
+			Operation:  "+10-05+02",
+			Result:     "+7",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -3722,8 +3722,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-5+2",
-			Result:     "-3",
+			Operation:  "+10-05+03",
+			Result:     "+8",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -3732,8 +3732,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-5+1",
-			Result:     "-4",
+			Operation:  "+10-05+04",
+			Result:     "+9",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -3742,7 +3742,7 @@ func InitializeGames(db *gorm.DB) {
 
 		lesson = models.Lesson{
 			StepRefer: step.ID,
-			Children:  []string{"+1", "+2", "+3", "+4", "+5","+6","+7","+8","+9","+10", "-1", "-2", "-3", "-4", "-5", "-6", "-7", "-8", "-9", "-10"},
+			Children:  []string{"+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9", "+10", "-1", "-2", "-3", "-4", "-5", "-6", "-7", "-8", "-9", "-10"},
 			CreatedAt: time.Time{},
 		}
 
@@ -4025,8 +4025,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-5+4",
-			Result:     "-1",
+			Operation:  "-10+05-01",
+			Result:     "-6",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -4035,8 +4035,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-5+3",
-			Result:     "-2",
+			Operation:  "-10+05-02",
+			Result:     "-7",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -4045,8 +4045,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-5+2",
-			Result:     "-3",
+			Operation:  "-10+05-03",
+			Result:     "-8",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -4055,8 +4055,8 @@ func InitializeGames(db *gorm.DB) {
 
 		trainChild = models.TrainChild{
 			TrainRefer: train.ID,
-			Operation:  "-5+1",
-			Result:     "-4",
+			Operation:  "-10+05-04",
+			Result:     "-9",
 			Speed:      0,
 			CreatedAt:  time.Time{},
 		}
@@ -4065,7 +4065,7 @@ func InitializeGames(db *gorm.DB) {
 
 		lesson = models.Lesson{
 			StepRefer: step.ID,
-			Children:  []string{"+1", "+2", "+3", "+4", "+5", "-1", "-2", "-3", "-4", "-5"},
+			Children:  []string{"+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9", "+10", "-1", "-2", "-3", "-4", "-5", "-6", "-7", "-8", "-9", "-10"},
 			CreatedAt: time.Time{},
 		}
 

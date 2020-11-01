@@ -96,7 +96,6 @@
                     </div>
                 </div>
 
-
                 <div id="keyboard" class="row h-35 no-gutters">
                     <div class="col-2 offset-1">
                         <button class="btn btn-outline-violet btn-lg btn-block" data-value="0">0</button>
@@ -265,22 +264,28 @@
                     let pressedValue = parseInt($(this).data("value"));
 
                     let index = parseInt($("#next").data("id"));
-                    let value = parseInt(getStepResultById(index));
 
                     let handEl = $("#hand_value");
-                    let actualValue = parseInt(handEl.data("value"));
+
+                    let actualValue = parseInt(handEl.data("value"));  
+
                     if (isNaN(actualValue)) {
+                        console.log("isNaN(actualValue)");
                         actualValue = "";
                     }
-                    if (value > 9) {
-                        if (actualValue > 9 ) {
-                            handEl.html(pressedValue);
-                            handEl.data("value", pressedValue);
-                        } else {
+
+                    let valueResulat = parseInt(getStepResultById(index));
+
+                    let longeurResultat = 2;
+                    let longeurActualValue = actualValue.toString().length;
+
+                    console.log("longeurResultat ="+longeurResultat+" longeurActualValue= "+longeurActualValue );
+
+                    if (longeurActualValue < longeurResultat ) {
                             handEl.html(actualValue.toString() + pressedValue.toString());
                             handEl.data("value", actualValue.toString() + pressedValue.toString());
-                        }
-                    } else {
+                    }
+                    else {
                         handEl.html(pressedValue);
                         handEl.data("value", pressedValue);
                     }
@@ -299,17 +304,17 @@
                 return steps[0].Children[id];
             }
 
+              // Retourne la valeur de l'étape courrante
+              function getStepResultById(id) {
+                return steps[0].Children[id]["Result"];
+            }
+
             // Retourne la valeur de la prochaine étape
             function getNextStepValueById(id) {
                 return steps[0].Children[id + 1];
             }
 
-            // Retourne la valeur de l'étape courrante
-            function getStepResultById(id) {
-                return steps[0].Children[id]["Result"];
-            }
-
-            // Retourne le nomnbre d'étape dans la lesson
+            // Retourne le nombre d'étape dans la lesson
             function getNumberOfSteps() {
                 return parseInt(steps[0].Children.length);
             }
