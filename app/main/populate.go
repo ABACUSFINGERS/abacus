@@ -1668,6 +1668,7 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
+		/**
 		//STEP 25
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -1737,11 +1738,13 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 26
+		*/
+
+		//STEP 25
 		step = models.Step{
 			Title:          "Exercices sur les Petits Amis +",
-			Subtitle:       "Petit Ami (+) la formule",
-			Order:          26,
+			Subtitle:       "Petit Ami (+)",
+			Order:          25,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "write_formula",
@@ -1806,11 +1809,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&lesson)
 
-		//STEP 27
+		//STEP 26
 		step = models.Step{
 			Title:          "Exercices sur les Petits Amis",
 			Subtitle:       "Exercices sur les Petits Amis",
-			Order:          27,
+			Order:          26,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -1927,11 +1930,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 28
+		//STEP 27
 		step = models.Step{
 			Title:          "2ième étape vers la RAPIDITÉ.",
 			Subtitle:       "Les Petits Amis (-) se composent en 4 formules.",
-			Order:          28,
+			Order:          27,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "lesson_formula",
@@ -2020,6 +2023,7 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
+		/**
 		//STEP 29
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -2091,11 +2095,13 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 30
+		*/
+
+		//STEP 28
 			step = models.Step{
-					Title:          "Exercices sur les Petits Amis +",
-					Subtitle:       "Petit Ami (+) la formule",
-					Order:          30,
+					Title:          "Exercices sur les Petits Amis -",
+					Subtitle:       "Petit Ami (-)",
+					Order:          28,
 					IsFree:         false,
 					IsDisplayHands: false,
 					Type:           "write_formula",
@@ -2160,11 +2166,11 @@ func InitializeGames(db *gorm.DB) {
 		
 				db.Save(&lesson)
 		
-		//STEP 31
+		//STEP 29
 		step = models.Step{
 			Title:          "Exercices sur les Petits Amis (-)",
 			Subtitle:       "Exercices sur les Petits Amis (-)",
-			Order:          31,
+			Order:          29,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -2281,11 +2287,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 32
+		//STEP 30
 		step = models.Step{
 			Title:          "3ième étape vers la RAPIDITÉ",
 			Subtitle:       "Les 9 formules des bons Amis (+)",
-			Order:          32,
+			Order:          30,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "lesson_formula",
@@ -2464,6 +2470,7 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
+		/**
 		//STEP 33
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -2503,12 +2510,13 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
+		*/
 
-		//STEP 34
+		//STEP 31
 		step = models.Step{
-			Title:          "Exercices sur les Bon Amis (+)",
-			Subtitle:       "Bon Ami (+) la formule",
-			Order:          34,
+			Title:          "Exercices sur les Bons Amis (+)",
+			Subtitle:       "Bon Ami (+)",
+			Order:          31,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "write_formula",
@@ -2623,11 +2631,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&lesson)
 
-		//STEP 35
+		//STEP 32
 		step = models.Step{
 			Title:          "Exercices sur les bons Amis",
 			Subtitle:       "Exercices sur les bons Amis",
-			Order:          35,
+			Order:          32,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -2904,11 +2912,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 36
+		//STEP 33
 		step = models.Step{
 			Title:          "4ème étape vers la RAPIDITÉ",
 			Subtitle:       "Les 9 formules des bons Amis (-)",
-			Order:          36,
+			Order:          33,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "lesson_formula",
@@ -3087,6 +3095,7 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
+		/**
 		//STEP 37
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -3126,11 +3135,13 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 38
+		*/
+
+		//STEP 34
 		step = models.Step{
 			Title:          "Exercices sur les Bons Amis (-)",
-			Subtitle:       "Bons Ami (-) la formule",
-			Order:          38,
+			Subtitle:       "Bon Ami (-)",
+			Order:          34,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "write_formula",
@@ -3245,11 +3256,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&lesson)
 
-		//STEP 39
+		//STEP 35
 		step = models.Step{
 			Title:          "Exercices sur les bons Amis (-)",
 			Subtitle:       "Exercices sur les bons Amis (-)",
-			Order:          39,
+			Order:          35,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -3516,11 +3527,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 40
+		//STEP 36
 		step = models.Step{
 			Title:          "5ème étape vers la RAPIDITÉ",
 			Subtitle:       "Les 4 formules des grands Amis (+)",
-			Order:          40,
+			Order:          36,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "lesson_formula",
@@ -3609,6 +3620,8 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
+		/**
+
 		//STEP 41
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -3678,12 +3691,13 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
+		*/
 		
-		//STEP 42
+		//STEP 37
 		step = models.Step{
 			Title:          "Exercices sur les Grands Amis (+)",
-			Subtitle:       "Grands Ami (+) la formule",
-			Order:          42,
+			Subtitle:       "Grand Ami (+)",
+			Order:          37,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "write_formula",
@@ -3748,11 +3762,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&lesson)
 
-		//STEP 43
+		//STEP 38
 		step = models.Step{
 			Title:          "Exercices sur les grands Amis (-)",
 			Subtitle:       "Exercices sur les grands Amis (-)",
-			Order:          43,
+			Order:          38,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -3869,11 +3883,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 44
+		//STEP 39
 		step = models.Step{
 			Title:          "6ème étape vers la RAPIDITÉ",
 			Subtitle:       "Les 4 formules des grands Amis (+)",
-			Order:          44,
+			Order:          39,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "lesson_formula",
@@ -3962,6 +3976,8 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
+		/**
+		
 		//STEP 45
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -4001,12 +4017,13 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
+		*/
 	
-		//STEP 46
+		//STEP 40
 		step = models.Step{
-			Title:          "Exercices sur les Petits Amis +",
-			Subtitle:       "Petit Ami (+) la formule",
-			Order:          46,
+			Title:          "Exercices sur les Grands Amis -",
+			Subtitle:       "Grand Ami (-)",
+			Order:          40,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "write_formula",
@@ -4071,11 +4088,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&lesson)
 
-		//STEP 47
+		//STEP 41
 		step = models.Step{
 			Title:          "Exercices sur les grands Amis (-)",
 			Subtitle:       "Exercices sur les grands Amis (-)",
-			Order:          47,
+			Order:          41,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -4202,11 +4219,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 48
+		//STEP 42
 		step = models.Step{
 			Title:          "Introduction du calcul au-delà de 99.",
 			Subtitle:       "Introduction du calcul au-delà de 99.",
-			Order:          48,
+			Order:          42,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -4323,11 +4340,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 49
+		//STEP 43
 		step = models.Step{
 			Title:          "Uniquement les dixaines mais somme au-delà de 99",
 			Subtitle:       "Uniquement les dixaines mais somme au-delà de 99",
-			Order:          49,
+			Order:          43,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -4444,11 +4461,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 50
+		//STEP 44
 		step = models.Step{
 			Title:          "Uniquement les dixaines mais somme au-delà de 99",
 			Subtitle:       "Uniquement les dixaines mais somme au-delà de 99",
-			Order:          50,
+			Order:          44,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -4578,20 +4595,38 @@ func InitializeCmss(db *gorm.DB) {
 		db.Create(&c)
 
 		c = models.Cms{
-			Content: "<div id=\"main\"> <div class=\"breadcrumb-section\"> <div class=\"container\"> <h1>Comment ça marche</h1> </div> </div> <div class=\"container\"> <section id=\"primary\" class=\"content-full-width\"> <div class=\"column\"> <p> La proposition d’ABACUS Fingers est de vous faire acquérir sa méthode de l’apprentissage des mathématiques par le biais du jeu. </p> <p> Pour accéder à la version complète du jeu, la création d’un profil est nécessaire. Celui-ci vous permettra de continuer à progresser et de reprendre au niveau auquel vous vous êtes arrêtés quelque soit le support que vous utilisez (ordinateur, tablette ou mobile). </p> <p> Une adresse email (email d’un parent) est nécessaire pour la création du profil.Il vous sera également demandé d’indiquer le nom de l’enfant, sa date de naissance, un mot de passe et de choisir une formule. </p> <p> Retrouve toutes les formules dans notre menu <a href=\"/cms/nos-tarifs\">«Nos Tarifs»</a>. </p> </div> </section> </div> </div>",
+			Content: "<div id=\"main\"> <div class=\"breadcrumb-section\"> <div class=\"container\"> <h1>Comment ça marche</h1> </div> </div> <div class=\"container\"> <section id=\"primary\" class=\"content-full-width\"> <div class=\"column\"> <p> La proposition d’ABACUS Fingers est de vous faire acquérir sa méthode de l’apprentissage des mathématiques par le biais du jeu. </p> <p> Pour accéder à la version complète du jeu, la création d’un profil est nécessaire. Celui-ci vous permettra de continuer à progresser et de reprendre au niveau auquel vous vous êtes arrêtés quelque soit le support que vous utilisez (ordinateur, tablette ou mobile). </p> <p> Une adresse email (email d’un parent) est nécessaire pour la création du profil. Il vous sera également demandé d’indiquer le prénom de l’enfant, sa date de naissance et un mot de passe. </p> <p> Créer un compte en cliquant sur <a href=\"/creation-compte\"><strong>«Se connecter» </strong></a>. </p> </div> </section> </div> </div>",
 			Slug:    "comment-ca-marche",
 		}
 		db.Create(&c)
 		
 		c = models.Cms{
-			Content: "<div id=\"main\"> <div class=\"breadcrumb-section\"> <div class=\"container\"> <h1>Méthode</h1> </div> </div> <div class=\"container\"> <section id=\"primary\" class=\"content-full-width\"> <div class=\"column\"> <p><h1>Les chiffres de 0 à 99</h1></p> <p><b1>1/ Les éléments à connaitre pour appréhender la méthode</b1></p> <p>La représentation des mains :</p> <p>- La main droite représente les unités</p> <p>- La main gauche représente les dizaines</p> <div class=\"text-center\"><img src=\"/assets/abacus/images/Main_G_et_D.jpg\"></div> <p><b>2/ La représentation des chiffres de 0 à 9</b></p> <p>Afin de garder la même méthodologie de visualisation des nombres, nous avons opté de symboliser les chiffres par des points bleus sur le bout des doigts. Les points bleus symbolisent les doigts en contact avec une surface plate (ex. : table, bureau, etc…).</p> <div class=\"text-center\"><h1>0 – Zéro</h1></p></div> <div class=\"text-center\"><img src=\"/assets/abacus/images/number0.jpg\"></div> <div class=\"text-center\"><h1>1 – Un</h1></p></div>  <div class=\"text-center\"><img src=\"/assets/abacus/images/number1.jpg\"></div> <div class=\"text-center\"><h1>2 – Deux</h1></p></div> <div class=\"text-center\"><img src=\"/assets/abacus/images/number2.jpg\"></div> <div class=\"text-center\"><h1>3 – Trois</h1></p></div> <div class=\"text-center\"><img src=\"/assets/abacus/images/number3.jpg\"></div> </div> </section> </div> </div>",
+			Content: "<div id=\"main\"><div class=\"breadcrumb-section\"> <div class=\"container\"> <h1>Méthode</h1> </div> </div><div class=\"container\"><section id=\"primary\" class=\"content-full-width\"> <h2> La méthode par catégorie </h2> <div class=\"dt-sc-pricing-table\"> <a href=\"/cms/chiffres\" class=\"\"> <div class=\"column dt-sc-one-third first\"> <div class=\"dt-sc-pr-tb-col mustard\"> <div class=\"dt-sc-tb-header\"> <div class=\"dt-sc-tb-thumb\"><img src=\"/assets/abacus/images/mains_chiffres.png\" alt=\"\" title=\"\"> </div> <div class=\"dt-sc-price\">Les chiffres</div> </div> <ul class=\"dt-sc-tb-content\"> <li>Images des mains et chiffres</li> <li>Les chiffres de 0 à 99</li> <li>Mains gauche et droite</li> </ul> <div class=\"dt-sc-buy-now\"><a href=\"/cms/chiffres\" class=\"dt-sc-button small mustard\">Chiffres</a></div> </div> </div></a> <a href=\"/cms/addition\" class=\"\"><div class=\"column dt-sc-one-third\"> <div class=\"dt-sc-pr-tb-col green\"> <div class=\"dt-sc-tb-header\"> <div class=\"dt-sc-tb-thumb\"><img src=\"/assets/abacus/images/addition.png\" alt=\"\" title=\"\"> </div> <div class=\"dt-sc-price\">Addition</div> </div> <ul class=\"dt-sc-tb-content\"> <li>L’addition avec les doigts</li> <li>Astuce pour la rapidité</li> <li>Les formules</li> </ul> <div class=\"dt-sc-buy-now\"><a href=\"/cms/addition\" class=\"dt-sc-button small green\">Addition</a></div> </div> </div></a> <a href=\"/cms/soustraction\" class=\"\"><div class=\"column dt-sc-one-third\"> <div class=\"dt-sc-pr-tb-col blue\"> <div class=\"dt-sc-tb-header\"> <div class=\"dt-sc-tb-thumb\"><img src=\"/assets/abacus/images/soustraction.png\" alt=\"\" title=\"\"> </div> <div class=\"dt-sc-price\">Soustraction</div> </div> <ul class=\"dt-sc-tb-content\"> <li>La soustraction avec les doigts</li> <li>Astuce pour la rapidité</li> <li>Les formules</li> </ul> <div class=\"dt-sc-buy-now\"><a href=\"/cms/soustraction\" class=\"dt-sc-button small blue\">Soustraction</a></div> </div> </div> </div> </section> <!--primary ends--> </div> <!--container ends--> </div></a>",
 			Slug:    "methode",
+		}
+		db.Create(&c)
+		
+		c = models.Cms{
+			Content: "<div id=\"main\"> <div class=\"breadcrumb-section\"> <div class=\"container\"> <h1>Les chiffres</h1> </div> </div> <div class=\"container\"> <section id=\"primary\" class=\"content-full-width\"> <div class=\"column\"> <p><h1>Les chiffres de 0 à 99</h1></p> <p><b1>1/ Les éléments à connaitre pour appréhender la méthode</b1></p> <p>La représentation des mains :</p> <p>- La main droite représente les unités</p> <p>- La main gauche représente les dizaines</p> <div class=\"text-center\"><img src=\"/assets/abacus/images/Main_G_et_D.jpg\"></div> <p><b>2/ La représentation des chiffres de 0 à 9</b></p> <p>Afin de garder la même méthodologie de visualisation des nombres, nous avons opté de symboliser les chiffres par une coloration des des doigts. Les couleurs symbolisent les doigts en contact avec une surface plate (ex. : table, bureau, etc…).</p> <div class=\"text-center\"><h1>0 – Zéro</h1></p></div> <div class=\"text-center\"><img src=\"/assets/abacus/images/number0.jpg\"></div> <div class=\"text-center\"><h1>1 – Un</h1></p></div>  <div class=\"text-center\"><img src=\"/assets/abacus/images/number1.jpg\"></div> <div class=\"text-center\"><h1>2 – Deux</h1></p></div> <div class=\"text-center\"><img src=\"/assets/abacus/images/number2.jpg\"></div> <div class=\"text-center\"><h1>3 – Trois</h1></p></div> <div class=\"text-center\"><img src=\"/assets/abacus/images/number3.jpg\"></div> </div> </section> </div> </div>",
+			Slug:    "chiffres",
+		}
+		db.Create(&c)
+		
+		c = models.Cms{
+			Content: "<div id=\"main\"> <div class=\"breadcrumb-section\"> <div class=\"container\"> <h1>L’Addition</h1> </div> </div> <div class=\"container\"> <section id=\"primary\" class=\"content-full-width\"> <div class=\"column\"> <p><h1>L’addition</h1></p> <p><b1>Le principe repose sur l’acquisition d’automatisme composé de 3 familles : </b1></p> <p>1- Petits Amis</p> <p>2- Bons Amis</p> <p>3- Grands Amis</p> <p>Le prince d’automatisme :</p> <p>L’acquisition d’automatisme fait appel à la mémoire procédurale. C’est une mémoire à long terme implicite qui permet la motricité automatique. Elle fonctionne grâce à différentes zones du cerveau reliées entre elles par des synapses fonctionnant avec des neurotransmetteurs. Cette association permet l’apprentissage progressif de procédures. Celles-ci sont d’abord traitées par la mémoire déclarative et de travail puis sont intégrées dans la mémoire procédurale grâce à la répétition.</p> <p>Approche de la méthode :</p> <div class=\"text-center\"><img src=\"/assets/abacus/images/important.webp\"></div> <p>Au préalable bien s’assurer que l’enfant a saisi le dénombrement des chiffres sur les doigts de 1 à 9 puis de 10 à 90 avant d’aborder la notion des automatismes.</p> <p>Le principe de la méthode repose sur la manipulation des petits nombres combinés par les automatismes. L’objectif des automatismes est de gérer le passage des tranches de 5 et de 10 au moment de l’addition.</p> <p><b>1/ Petits Amis (+)</b></p> <p>La notion des « Petits Amis » dans la méthode sont les pairs de chiffres qui totalisent 5.</p> <p>Le « Petit Ami » de 1 est 4 (puisque 1 + 4 = 5) et inversement le « Petit Ami » de 4 est 1.</p> <p>Le « Petit Ami » de 2 est 3 (puisque 2 + 3 = 5) et inversement le « Petit Ami » de 3 est 2.</p> <div class=\"text-center\"><img src=\"/assets/abacus/images/addition/Formule_petits_amis.png\"></div> <p>Exemple le « Petit Ami » de +1 :</p> <p>Rappel de la formule</p> <div class=\"text-center\"><img src=\"/assets/abacus/images/addition/+1.webp\"></div> <p>Pour notre exemple, il nous faut gérer le passage de 4 à 5 dans l’addition suivante :</p> <div class=\"text-center\"><img src=\"/assets/abacus/images/addition/4+1=5.webp\"></div> <p>Illustration :</p><p>Voici comme se décompose l’opération du passage de 4 à 5 :</p><p>Illustration de la manipulation :</p> <p>2/ Bons Amis (+)</p><p>La notion des « Bons Amis » sont les pairs de chiffres qui totalisent 10.</p><p>Exemple le « Bon Ami » de +3 :</p><p>Rappel de la formule</p><p>Pour notre exemple, il nous faut gérer le passage de 9 à 12 dans l’addition de :</p><p>Illustration :</p><p>Voici comme se décompose l’opération du passage de 9 à 12 :</p><p><b>3/ Grands Amis (+) </b></p><p>Les « Grands Amis » sont la combinaison des « Petits Amis » et des « Bons Amis ».</p> </div> </section> </div> </div>",
+			Slug:    "addition",
+		}
+		db.Create(&c)
+		
+		c = models.Cms{
+			Content: "<div id=\"main\"> <div class=\"breadcrumb-section\"> <div class=\"container\"> <h1>L’Addition</h1> </div> </div> <div class=\"container\"> <section id=\"primary\" class=\"content-full-width\"> <div class=\"column\"> <p><h1>L’addition</h1></p> <p><b1>Le principe repose sur l’acquisition d’automatisme composé de 3 familles : </b1></p> <p>1- Petits Amis</p> <p>2- Bons Amis</p> <p>3- Grands Amis</p> <p>Le prince d’automatisme :</p> <p>L’acquisition d’automatisme fait appel à la mémoire procédurale. C’est une mémoire à long terme implicite qui permet la motricité automatique. Elle fonctionne grâce à différentes zones du cerveau reliées entre elles par des synapses fonctionnant avec des neurotransmetteurs. Cette association permet l’apprentissage progressif de procédures. Celles-ci sont d’abord traitées par la mémoire déclarative et de travail puis sont intégrées dans la mémoire procédurale grâce à la répétition.</p> <p>Approche de la méthode :</p> <div class=\"text-center\"><img src=\"/assets/abacus/images/important.webp\"></div> <p>Au préalable bien s’assurer que l’enfant a saisi le dénombrement des chiffres sur les doigts de 1 à 9 puis de 10 à 90 avant d’aborder la notion des automatismes.</p> <p>Le principe de la méthode repose sur la manipulation des petits nombres combinés par les automatismes. L’objectif des automatismes est de gérer le passage des tranches de 5 et de 10 au moment de l’addition.</p> <p><b>1/ Petits Amis (+)</b></p> <p>La notion des « Petits Amis » dans la méthode sont les pairs de chiffres qui totalisent 5.</p> <p>Le « Petit Ami » de 1 est 4 (puisque 1 + 4 = 5) et inversement le « Petit Ami » de 4 est 1.</p> <p>Le « Petit Ami » de 2 est 3 (puisque 2 + 3 = 5) et inversement le « Petit Ami » de 3 est 2.</p> <div class=\"text-center\"><img src=\"/assets/abacus/images/addition/Formule_petits_amis.png\"></div> <p>Exemple le « Petit Ami » de +1 :</p> <p>Rappel de la formule</p> <div class=\"text-center\"><img src=\"/assets/abacus/images/addition/+1.webp\"></div> <p>Pour notre exemple, il nous faut gérer le passage de 4 à 5 dans l’addition suivante :</p> <div class=\"text-center\"><img src=\"/assets/abacus/images/addition/4+1=5.webp\"></div>   </div> </section> </div> </div>",
+			Slug:    "soustraction",
 		}
 		db.Create(&c)
 
 		c = models.Cms{
-			Content: "<div id=\"main\"><div class=\"breadcrumb-section\"> <div class=\"container\"> <h1>Nos tarifs</h1> </div> </div><div class=\"container\"><section id=\"primary\" class=\"content-full-width\"> <h2>Une formule adaptée à chacun</h2> <div class=\"dt-sc-pricing-table\"> <div class=\"column dt-sc-one-third first\"> <div class=\"dt-sc-pr-tb-col mustard\"> <div class=\"dt-sc-tb-header\"> <div class=\"dt-sc-tb-thumb\"><img src=\"http://placehold.it/300x200\" alt=\"\" title=\"\"> <div class=\"dt-sc-tb-title\"> <h3>Mensuel</h3></div> </div> <div class=\"dt-sc-price\"> 4 €<span> TTC</span></div> </div> <ul class=\"dt-sc-tb-content\"> <li>Accès à toutes les leçons</li> <li>Accès à tous les exercices</li> <li>Gagner des étoiles</li> </ul> <div class=\"dt-sc-buy-now\"><a href=\"/commander/?order_type=monthly\" class=\"dt-sc-button small mustard\">Commander</a></div> </div> </div> <div class=\"column dt-sc-one-third\"> <div class=\"dt-sc-pr-tb-col green\"> <div class=\"dt-sc-tb-header\"> <div class=\"dt-sc-tb-thumb\"><img src=\"http://placehold.it/300x200\" alt=\"\" title=\"\"> <div class=\"dt-sc-tb-title\"> <h3>Annuel</h3></div> </div> <div class=\"dt-sc-price\"> 20 €<span> TTC</span></div> </div> <ul class=\"dt-sc-tb-content\"> <li>Accès à toutes les leçons</li> <li>Accès à tous les exercices</li> <li>Gagner des étoiles</li> </ul> <div class=\"dt-sc-buy-now\"><a href=\"/commander/?order_type=annual\" class=\"dt-sc-button small green\">Commander</a></div> </div> </div> <div class=\"column dt-sc-one-third\"> <div class=\"dt-sc-pr-tb-col blue\"> <div class=\"dt-sc-tb-header\"> <div class=\"dt-sc-tb-thumb\"><img src=\"http://placehold.it/300x200\" alt=\"\" title=\"\"> <div class=\"dt-sc-tb-title\"> <h3>Bi-Annuel</h3></div> </div> <div class=\"dt-sc-price\"> 30 €<span> TTC</span></div> </div> <ul class=\"dt-sc-tb-content\"> <li>Accès à toutes les leçons</li> <li>Accès à tous les exercices</li> <li>Gagner des étoiles</li> </ul> <div class=\"dt-sc-buy-now\"><a href=\"/commander/?order_type=bi-annual\" class=\"dt-sc-button small blue\">Commander</a></div> </div> </div> </div> </section> <!--primary ends--> </div> <!--container ends--> </div>",
-			Slug:    "nos-tarifs",
+			Content: "<div id=\"main\"><div class=\"breadcrumb-section\"> <div class=\"container\"> <h1>Faire un Don</h1> </div> </div><div class=\"container\"><section id=\"primary\" class=\"content-full-width\"> <h2>Une formule adaptée à chacun</h2> <div class=\"dt-sc-pricing-table\"> <div class=\"column dt-sc-one-third first\"> <div class=\"dt-sc-pr-tb-col mustard\"> <div class=\"dt-sc-tb-header\"> <div class=\"dt-sc-tb-thumb\"><img src=\"/assets/abacus/images/Merci.png\" alt=\"\" title=\"\"> <div class=\"dt-sc-tb-title\"> <h3>Faire un Don</h3></div> </div> <div class=\"dt-sc-price\"> 5 €<span> TTC</span></div> </div> <ul class=\"dt-sc-tb-content\"> <li>Accès à toutes les leçons</li> <li>Accès à tous les exercices</li> <li>Gagner des étoiles</li> </ul> <div class=\"dt-sc-buy-now\"><a href=\"/commander/?order_type=don\" class=\"dt-sc-button small mustard\">Faire un Don</a></div> </div> </div> <div class=\"column dt-sc-one-third\"> <div class=\"dt-sc-pr-tb-col green\"> <div class=\"dt-sc-tb-header\"> <div class=\"dt-sc-tb-thumb\"><img src=\"/assets/abacus/images/merci_main.png\" alt=\"\" title=\"\"> <div class=\"dt-sc-tb-title\"> <h3>Faire un Don</h3></div> </div> <div class=\"dt-sc-price\"> 10 €<span> TTC</span></div> </div> <ul class=\"dt-sc-tb-content\"> <li>Accès à toutes les leçons</li> <li>Accès à tous les exercices</li> <li>Gagner des étoiles</li> </ul> <div class=\"dt-sc-buy-now\"><a href=\"/commander/?order_type=don\" class=\"dt-sc-button small green\">Faire un Don</a></div> </div> </div> <div class=\"column dt-sc-one-third\"> <div class=\"dt-sc-pr-tb-col blue\"> <div class=\"dt-sc-tb-header\"> <div class=\"dt-sc-tb-thumb\"><img src=\"/assets/abacus/images/Merci.png\" alt=\"\" title=\"\"> <div class=\"dt-sc-tb-title\"> <h3>Faire un Don</h3></div> </div> <div class=\"dt-sc-price\"> 15 €<span> TTC</span></div> </div> <ul class=\"dt-sc-tb-content\"> <li>Accès à toutes les leçons</li> <li>Accès à tous les exercices</li> <li>Gagner des étoiles</li> </ul> <div class=\"dt-sc-buy-now\"><a href=\"/commander/?order_type=don\" class=\"dt-sc-button small blue\">Faire un Don</a></div> </div> </div> </div> </section> <!--primary ends--> </div> <!--container ends--> </div>",
+			Slug:    "don",
 		}
 		db.Create(&c)
 

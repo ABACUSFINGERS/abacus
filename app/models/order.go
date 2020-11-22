@@ -38,46 +38,21 @@ type SubscriptionItem struct {
 	DayDuration  int64
 }
 
-func GetMonthlySubscription() SubscriptionItem {
+func GetDonSubscription() SubscriptionItem {
 	return SubscriptionItem{
-		Name:         "Mensuel",
+		Name:         "Faire un Don",
 		Descriptions: []string{"Accès à toutes les leçons", "Accès à tous les exercices", "Gagner des étoiles"},
-		Type:         "monthly",
+		Type:         "don",
 		Price:        4,
 		DayDuration:  30,
 	}
 }
 
-func GetAnnualSubscription() SubscriptionItem {
-	return SubscriptionItem{
-		Name:         "Annuel",
-		Descriptions: []string{"Accès à toutes les leçons", "Accès à tous les exercices", "Gagner des étoiles"},
-		Type:         "annual",
-		Price:        20,
-		DayDuration:  365,
-	}
-}
-
-func GetBiAnnualSubscription() SubscriptionItem {
-	return SubscriptionItem{
-		Name:         "Bi-annuel",
-		Descriptions: []string{"Accès à toutes les leçons", "Accès à tous les exercices", "Gagner des étoiles"},
-		Type:         "bi-annual",
-		Price:        30,
-		DayDuration:  730,
-	}
-}
 
 func GetSubscriptionItem(t string) (s SubscriptionItem) {
 	switch t {
-	case "monthly":
-		s = GetMonthlySubscription()
-		break
-	case "annual":
-		s = GetAnnualSubscription()
-		break
-	case "bi-annual":
-		s = GetBiAnnualSubscription()
+	case "Don":
+		s = GetDonSubscription()
 		break
 	}
 

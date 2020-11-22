@@ -26,7 +26,7 @@ func GameController(c echo.Context) error {
 	student := models.StudentSession(db, c)
 
 	if student.ID == 0 && !student.IsLicenced() {
-		return c.Redirect(http.StatusFound, "/cms/nos-tarifs/")
+		return c.Redirect(http.StatusFound, "/cms/don/")
 	} else {
 		var step models.Step
 		stepID, _ := strconv.Atoi(c.QueryParam("id"))
@@ -85,7 +85,7 @@ func PGameController(c echo.Context) error {
 	student := models.StudentSession(db, c)
 
 	if student.ID == 0 && !student.IsLicenced() {
-		return c.Redirect(http.StatusFound, "/cms/nos-tarifs/")
+		return c.Redirect(http.StatusFound, "/cms/don/")
 	} else {
 		var step models.Step
 		db.Where("ID = ?", c.FormValue("gameID")).First(&step)
