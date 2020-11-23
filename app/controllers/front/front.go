@@ -1,8 +1,8 @@
 package front
 
 import (
-	"../../models"
-	"../../tools/debug"
+	"flycode.go/abacusf/app/models"
+	"flycode.go/abacusf/app/tools/debug"
 	"github.com/labstack/echo"
 )
 
@@ -22,9 +22,7 @@ func Front(e *echo.Echo) {
 
 	e.GET("/nous-contacter", ContactController)
 	e.GET("/nous-contacter/", ContactController)
-    e.POST("/sendmail", PContactController) 
-
-	
+  	
 
 	e.GET("/jeu", GameController)
 	e.GET("/jeu/", GameController)

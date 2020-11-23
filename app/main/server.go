@@ -4,7 +4,7 @@ package main
 
 
 import (
-	"../tools/debug"
+	"flycode.go/abacusf/app/tools/debug"
 	"net/http"
 	"log"
 	"github.com/gorilla/mux"

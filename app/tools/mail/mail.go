@@ -2,7 +2,7 @@ package mail
 
 import (
 	"bytes"
-	"../debug"
+	"flycode.go/abacusf/app/tools/debug"
 	"html/template"
 	"net/smtp"
 	"strconv"

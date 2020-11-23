@@ -1,8 +1,8 @@
 package front
 
 import (
-	"../../models"
-	"../../tools/debug"
+	"flycode.go/abacusf/app/models"
+	"flycode.go/abacusf/app/tools/debug"
 	"github.com/labstack/echo"
 	"github.com/stripe/stripe-go"
 	"github.com/stripe/stripe-go/paymentintent"

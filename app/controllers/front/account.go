@@ -1,9 +1,9 @@
 package front
 
 import (
-	"../../models"
-	"../../tools/debug"
-	"../../tools/generate"
+	"flycode.go/abacusf/app/models"
+	"flycode.go/abacusf/app/tools/debug"
+	"flycode.go/abacusf/app/tools/generate"
 	"github.com/labstack/echo"
 	"net/http"
 	"time"

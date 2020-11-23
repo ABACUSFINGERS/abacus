@@ -1,7 +1,7 @@
 package models
 
 import (
-	"../tools/debug"
+	"flycode.go/abacusf/app/tools/debug"
 	"github.com/jinzhu/gorm"
 	"os"
 )

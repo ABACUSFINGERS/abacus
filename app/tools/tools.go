@@ -2,7 +2,7 @@ package tools
 
 import (
 	"github.com/labstack/echo"
-    htgotts "../lib/github.com/hegedustibor/htgotts"
+    htgotts "flycode.go/abacusf/app/lib/github.com/hegedustibor/htgotts"
     "os"
 	"strings"
 )

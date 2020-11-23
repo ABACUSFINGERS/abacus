@@ -1,9 +1,9 @@
 package main
 
 import (
-	"../controllers"
-	"../models"
-	"../tools/template"
+	"flycode.go/abacusf/app/controllers"
+	"flycode.go/abacusf/app/models"
+	"flycode.go/abacusf/app/tools/template"
 	session "github.com/ipfans/echo-session"
 	"github.com/joho/godotenv"
 	"github.com/labstack/echo"

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"../models"
-	"../tools"
-	"../tools/debug"
-	"../tools/generate"
+	"flycode.go/abacusf/app/models"
+	"flycode.go/abacusf/app/tools"
+	"flycode.go/abacusf/app/tools/debug"
+	"flycode.go/abacusf/app/tools/generate"
 	"github.com/jinzhu/gorm"
 	"github.com/joho/godotenv"
 	"time"

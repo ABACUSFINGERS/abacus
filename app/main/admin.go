@@ -1,8 +1,8 @@
 package main
 
 import (
-	"../models"
-	"../tools/debug"
+	"flycode.go/abacusf/app/models"
+	"flycode.go/abacusf/app/tools/debug"
 	"github.com/joho/godotenv"
 	"github.com/qor/admin"
 	"net/http"
