@@ -1,8 +1,8 @@
 package front
 
 import (
-	"flycode.go/abacusf/app/models"
-	"flycode.go/abacusf/app/tools/debug"
+	"mindset.go/abacus/app/models"
+	"mindset.go/abacus/app/tools/debug"
 	"github.com/labstack/echo"
 )
 

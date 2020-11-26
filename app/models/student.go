@@ -1,7 +1,7 @@
 package models
 
 import (
-	"flycode.go/abacusf/app/tools/generate"
+	"mindset.go/abacus/app/tools/generate"
 	session "github.com/ipfans/echo-session"
 	"github.com/jinzhu/gorm"
 	"github.com/labstack/echo"

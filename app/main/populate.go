@@ -1,10 +1,10 @@
 package main
 
 import (
-	"flycode.go/abacusf/app/models"
-	"flycode.go/abacusf/app/tools"
-	"flycode.go/abacusf/app/tools/debug"
-	"flycode.go/abacusf/app/tools/generate"
+	"mindset.go/abacus/app/models"
+	"mindset.go/abacus/app/tools"
+	"mindset.go/abacus/app/tools/debug"
+	"mindset.go/abacus/app/tools/generate"
 	"github.com/jinzhu/gorm"
 	"github.com/joho/godotenv"
 	"time"
@@ -31,7 +31,7 @@ func InitializeSites(db *gorm.DB) {
 	if count == 0 {
 		site := models.Site{
 			ID:        1,
-			Host:      "abacusfingers.website",
+			Host:      "35.181.6.50",
 			Title:     "AbacusFingers la nouvelle méthode d'apprentissage mathématique !",
 			Name:      "AbacusFingers",
 			CreatedAt: time.Time{},

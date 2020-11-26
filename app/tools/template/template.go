@@ -2,7 +2,7 @@ package template
 
 import (
 	"errors"
-	"flycode.go/abacusf/app/tools/debug"
+	"mindset.go/abacus/app/tools/debug"
 	"github.com/labstack/echo"
 	"html/template"
 	"io"

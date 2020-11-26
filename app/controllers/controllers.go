@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"flycode.go/abacusf/app/controllers/dashboard"
-	"flycode.go/abacusf/app/controllers/front"
-	"flycode.go/abacusf/app/tools/debug"
+	"mindset.go/abacus/app/controllers/dashboard"
+	"mindset.go/abacus/app/controllers/front"
+	"mindset.go/abacus/app/tools/debug"
 	"github.com/labstack/echo"
 )
 
