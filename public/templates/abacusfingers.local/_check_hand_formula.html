@@ -227,9 +227,10 @@
                 } else {
                     // configuration des mains > bon résultat
                     changeFingers(result, '_result' + "possibility" + trueSuffixID);
-                    for (let i = 0; i < operationItems.length; i++) {
-                        value = parseInt(operationItems[i]);
-                        changeFingers(value, "possibility" + trueSuffixID + i);
+                    let totalValue = 0;
+                    for (i = 0; i < operationItems.length; i++) {
+                        totalValue = (parseInt(totalValue) + parseInt(operationItems[i]));
+                        changeFingers(totalValue, "possibility" + trueSuffixID + i);
                     }
                     $( "#radio" + currentID ).val("good");
                 }
@@ -321,9 +322,10 @@
                         } else {
                             // configuration des mains
                             changeFingers(result, '_result' + "possibility" + trueSuffixID);
-                            for (let i = 0; i < operationItems.length; i++) {
-                                value = parseInt(operationItems[i]);
-                                changeFingers(value, "possibility" + trueSuffixID + i);
+                            let totalValue = 0;
+                            for (i = 0; i < operationItems.length; i++) {
+                            totalValue = (parseInt(totalValue) + parseInt(operationItems[i]));
+                            changeFingers(totalValue, "possibility" + trueSuffixID + i);
                             }
                             $( "#radio" + currentID ).val("good");
                         }

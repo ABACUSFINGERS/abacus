@@ -228,11 +228,43 @@
                     $("#hands").html(htmlHands);
 
                     // configuration des mains
-                    for (let i = 0; i < operationItems.length; i++) {
-                        value = parseInt(operationItems[i]);
-                        changeFingers(value, i);
+                    let totalValue = 0;
+                    for (i = 0; i < operationItems.length; i++) {
+                        totalValue = (parseInt(totalValue) + parseInt(totalValue) + parseInt( operationItems[i]));
+                        changeFingers(totalValue, i);
                     }
                     changeFingers(result, '_result');
+
+           /*
+            let totalValue = 0;
+
+            for(i=0; i<2; i++) {
+                console.log("Valeur = " + operationvalues[i]);
+
+                totalValue = (parseInt(totalValue) + parseInt( operationvalues[i]));
+
+                console.log(totalValue);
+                setTimeout(() => {changeValue("current_hand_value",  operationvalues[i]);}, 800);
+                setTimeout(() => {changeFingers(totalValue);}, 800);
+              
+            }
+           
+        // operationvalues = shuffleArray(operationvalues);
+
+            // Affichage des valeurs de l'opération
+            let totalValue = 0;
+             operationvalues.forEach((value, i) => {
+                  setTimeout(() => {
+                      console.log("Valeur = " + value);
+                      console.log("first part Step " + i);
+                      totalValue = (parseInt(totalValue) + parseInt(value));
+
+                     console.log(totalValue);
+                     setTimeout(() => {changeValue("current_hand_value", value);}, 800);
+                      setTimeout(() => {changeFingers(totalValue);}, 800);
+                  }, i * speed);    
+           });
+*/
 
                 } else {
                     let index = parseInt($(this).data("id"));
@@ -272,11 +304,13 @@
                         $("#hands").html(htmlHands);
 
                         // configuration des mains
-                        for (let i = 0; i < operationItems.length; i++) {
-                            value = parseInt(operationItems[i]);
-                            changeFingers(value, i);
+                        let totalValue = 0;
+                        for (i = 0; i < operationItems.length; i++) {
+                        totalValue = (parseInt(totalValue) + parseInt(totalValue) + parseInt( operationItems[i]));
+                        changeFingers(totalValue, i);
                         }
                         changeFingers(result, '_result');
+
 
                         changeProgressbar(index, getNumberOfSteps());
                         $("#next").data("id", index + 1);

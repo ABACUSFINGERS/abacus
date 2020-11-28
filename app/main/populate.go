@@ -1668,7 +1668,6 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		/**
 		//STEP 25
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -1738,13 +1737,13 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		*/
 
-		//STEP 25
+
+		//STEP 26
 		step = models.Step{
 			Title:          "Exercices sur les Petits Amis +",
 			Subtitle:       "Petit Ami (+)",
-			Order:          25,
+			Order:          26,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "write_formula",
@@ -1809,11 +1808,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&lesson)
 
-		//STEP 26
+		//STEP 27
 		step = models.Step{
 			Title:          "Exercices sur les Petits Amis",
 			Subtitle:       "Exercices sur les Petits Amis",
-			Order:          26,
+			Order:          27,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -1930,11 +1929,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 27
+		//STEP 28
 		step = models.Step{
 			Title:          "2ième étape vers la RAPIDITÉ.",
 			Subtitle:       "Les Petits Amis (-) se composent en 4 formules.",
-			Order:          27,
+			Order:          28,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "lesson_formula",
@@ -2023,7 +2022,7 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		/**
+
 		//STEP 29
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -2094,14 +2093,12 @@ func InitializeGames(db *gorm.DB) {
 		}
 
 		db.Save(&trainChild)
-
-		*/
-
-		//STEP 28
+		
+		//STEP 30
 			step = models.Step{
 					Title:          "Exercices sur les Petits Amis -",
 					Subtitle:       "Petit Ami (-)",
-					Order:          28,
+					Order:          30,
 					IsFree:         false,
 					IsDisplayHands: false,
 					Type:           "write_formula",
@@ -2166,11 +2163,11 @@ func InitializeGames(db *gorm.DB) {
 		
 				db.Save(&lesson)
 		
-		//STEP 29
+		//STEP 31
 		step = models.Step{
 			Title:          "Exercices sur les Petits Amis (-)",
 			Subtitle:       "Exercices sur les Petits Amis (-)",
-			Order:          29,
+			Order:          31,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -2287,11 +2284,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 30
+		//STEP 32
 		step = models.Step{
 			Title:          "3ième étape vers la RAPIDITÉ",
 			Subtitle:       "Les 9 formules des bons Amis (+)",
-			Order:          30,
+			Order:          32,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "lesson_formula",
@@ -2470,7 +2467,6 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		/**
 		//STEP 33
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -2509,14 +2505,12 @@ func InitializeGames(db *gorm.DB) {
 		}
 
 		db.Save(&trainChild)
-
-		*/
-
-		//STEP 31
+	
+		//STEP 34
 		step = models.Step{
 			Title:          "Exercices sur les Bons Amis (+)",
 			Subtitle:       "Bon Ami (+)",
-			Order:          31,
+			Order:          34,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "write_formula",
@@ -2631,11 +2625,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&lesson)
 
-		//STEP 32
+		//STEP 35
 		step = models.Step{
 			Title:          "Exercices sur les bons Amis",
 			Subtitle:       "Exercices sur les bons Amis",
-			Order:          32,
+			Order:          35,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -2912,11 +2906,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 33
+		//STEP 36
 		step = models.Step{
 			Title:          "4ème étape vers la RAPIDITÉ",
 			Subtitle:       "Les 9 formules des bons Amis (-)",
-			Order:          33,
+			Order:          36,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "lesson_formula",
@@ -3095,7 +3089,6 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		/**
 		//STEP 37
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -3135,13 +3128,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		*/
-
-		//STEP 34
+		//STEP 38
 		step = models.Step{
 			Title:          "Exercices sur les Bons Amis (-)",
 			Subtitle:       "Bon Ami (-)",
-			Order:          34,
+			Order:          38,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "write_formula",
@@ -3256,11 +3247,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&lesson)
 
-		//STEP 35
+		//STEP 39
 		step = models.Step{
 			Title:          "Exercices sur les bons Amis (-)",
 			Subtitle:       "Exercices sur les bons Amis (-)",
-			Order:          35,
+			Order:          39,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -3527,11 +3518,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 36
+		//STEP 40
 		step = models.Step{
 			Title:          "5ème étape vers la RAPIDITÉ",
 			Subtitle:       "Les 4 formules des grands Amis (+)",
-			Order:          36,
+			Order:          40,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "lesson_formula",
@@ -3620,8 +3611,6 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		/**
-
 		//STEP 41
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -3691,13 +3680,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		*/
-		
-		//STEP 37
+		//STEP 42
 		step = models.Step{
 			Title:          "Exercices sur les Grands Amis (+)",
 			Subtitle:       "Grand Ami (+)",
-			Order:          37,
+			Order:          42,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "write_formula",
@@ -3762,11 +3749,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&lesson)
 
-		//STEP 38
+		//STEP 43
 		step = models.Step{
 			Title:          "Exercices sur les grands Amis (-)",
 			Subtitle:       "Exercices sur les grands Amis (-)",
-			Order:          38,
+			Order:          43,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -3883,11 +3870,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 39
+		//STEP 44
 		step = models.Step{
 			Title:          "6ème étape vers la RAPIDITÉ",
 			Subtitle:       "Les 4 formules des grands Amis (+)",
-			Order:          39,
+			Order:          44,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "lesson_formula",
@@ -3976,8 +3963,6 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		/**
-		
 		//STEP 45
 		step = models.Step{
 			Title:          "Sélectionner la réponse la plus rapide.",
@@ -4017,13 +4002,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		*/
-	
-		//STEP 40
+		//STEP 46
 		step = models.Step{
 			Title:          "Exercices sur les Grands Amis -",
 			Subtitle:       "Grand Ami (-)",
-			Order:          40,
+			Order:          46,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "write_formula",
@@ -4088,11 +4071,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&lesson)
 
-		//STEP 41
+		//STEP 47
 		step = models.Step{
 			Title:          "Exercices sur les grands Amis (-)",
 			Subtitle:       "Exercices sur les grands Amis (-)",
-			Order:          41,
+			Order:          47,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -4219,11 +4202,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 42
+		//STEP 48
 		step = models.Step{
 			Title:          "Introduction du calcul au-delà de 99.",
 			Subtitle:       "Introduction du calcul au-delà de 99.",
-			Order:          42,
+			Order:          48,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -4340,11 +4323,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 43
+		//STEP 49
 		step = models.Step{
 			Title:          "Uniquement les dixaines mais somme au-delà de 99",
 			Subtitle:       "Uniquement les dixaines mais somme au-delà de 99",
-			Order:          43,
+			Order:          49,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -4461,11 +4444,11 @@ func InitializeGames(db *gorm.DB) {
 
 		db.Save(&trainChild)
 
-		//STEP 44
+		//STEP 50
 		step = models.Step{
 			Title:          "Uniquement les dixaines mais somme au-delà de 99",
 			Subtitle:       "Uniquement les dixaines mais somme au-delà de 99",
-			Order:          44,
+			Order:          50,
 			IsFree:         false,
 			IsDisplayHands: false,
 			Type:           "calcul",
@@ -4682,5 +4665,3 @@ func InitializeSounds() {
 		tools.GetMP3SoundFromText(sound, "fr")
 	}
 }
-
-
