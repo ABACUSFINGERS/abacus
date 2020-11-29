@@ -3808,7 +3808,7 @@ func InitializeGames(db *gorm.DB) {
 
 		lesson = models.Lesson{
 			StepRefer: step.ID,
-			Children:  []string{"+6", "5+10-5+1"},
+			Children:  []string{"+6", "+10-5+1"},
 			CreatedAt: time.Time{},
 		}
 
