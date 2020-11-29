@@ -229,7 +229,7 @@
                     changeFingers(result, '_result' + "possibility" + trueSuffixID);
                     let totalValue = 0;
                     for (i = 0; i < operationItems.length; i++) {
-                        totalValue = (parseInt(totalValue) + parseInt(operationItems[i]));
+                        totalValue = (parseInt(totalValue) + parseInt(totalValue) + parseInt(operationItems[i]));
                         changeFingers(totalValue, "possibility" + trueSuffixID + i);
                     }
                     $( "#radio" + currentID ).val("good");
@@ -324,7 +324,7 @@
                             changeFingers(result, '_result' + "possibility" + trueSuffixID);
                             let totalValue = 0;
                             for (i = 0; i < operationItems.length; i++) {
-                            totalValue = (parseInt(totalValue) + parseInt(operationItems[i]));
+                            totalValue = (parseInt(totalValue) + parseInt(totalValue) + parseInt(operationItems[i]));
                             changeFingers(totalValue, "possibility" + trueSuffixID + i);
                             }
                             $( "#radio" + currentID ).val("good");
