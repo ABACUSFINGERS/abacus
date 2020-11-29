@@ -31,7 +31,7 @@ func InitializeSites(db *gorm.DB) {
 	if count == 0 {
 		site := models.Site{
 			ID:        1,
-			Host:      "35.181.6.50",
+			Host:      "site.abacusfingers.com",
 			Title:     "AbacusFingers la nouvelle méthode d'apprentissage mathématique !",
 			Name:      "AbacusFingers",
 			CreatedAt: time.Time{},
